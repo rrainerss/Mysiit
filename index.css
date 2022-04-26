@@ -89,29 +89,11 @@
     }
     .MediumH1
     {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     .DividerLine
     {
         border-bottom: 1px solid var(--bordergray);
-    }
-    .DropdownButton
-    {
-        height: 2.6rem;
-        font-size: 0.8rem;
-        line-height: 2.6rem;
-        border: none;
-        background-color: var(--bg);
-    }
-    .DropdownButton:link, .DropdownButton:visited, .DropdownButton:hover, .DropdownButton:active
-    {
-        text-decoration: none;
-        color: var(--black);
-    }
-    .DropdownButton:hover, .DropdownButton:active
-    {
-        background-color: var(--green);
-        transition: all 150ms linear;
     }
     .BoxShadow
     {
@@ -123,6 +105,10 @@
         0px 2.7px 5.3px rgba(0, 0, 0, 0.06),
         0px 8.9px 15px rgba(0, 0, 0, 0.09),
         0px 18px 18px rgba(0, 0, 0, 0.18);
+    }
+    .PopupScrollbar
+    {
+        overflow-y: scroll;
     }
     @media only screen and (min-width: 768px) and (max-width: 1199px) /*991*/
     {
@@ -161,6 +147,10 @@
             {
                 padding: 0 1rem 0 1rem;
             }
+            .MaxWidthMargin
+            {
+                margin: 0 0rem 0 0rem;
+            }
             .StartSlide
             {
                 margin-left: 0.75rem;
@@ -176,6 +166,10 @@
             .MaxWidth
             {
                 padding: 0 1rem 0 1rem;
+            }
+            .MaxWidthMargin
+            {
+                margin: 0 0rem 0 0rem;
             }
             .StartSlide
             {
@@ -193,6 +187,10 @@
             {
                 padding: 0 1.5rem 0 1.5rem;
             }
+            .MaxWidthMargin
+            {
+                margin: 0 0.5rem 0 0.5rem;
+            }
             .StartSlide
             {
                 margin-left: 1rem;
@@ -209,6 +207,10 @@
             {
                 padding: 0 2rem 0 2rem;
             }
+            .MaxWidthMargin
+            {
+                margin: 0 1rem 0 1rem;
+            }
             .StartSlide
             {
                 margin-left: 1.5rem;
@@ -224,6 +226,10 @@
             .MaxWidth
             {
                 padding: 0 2.5rem 0 2.5rem;
+            }
+            .MaxWidthMargin
+            {
+                margin: 0 1.5rem 0 1.5rem;
             }
             .StartSlide
             {
@@ -350,6 +356,38 @@ transform: scale(1);
     }
 /*#endregion*/
 
+
+/*#region TOP NAVBAR DROPDOWN General elements*/
+    .Triangle
+    {
+        margin-top: -0.8rem;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 0;
+        height: 0;
+        border-left: 2rem solid transparent;
+        border-right: 2rem solid transparent;
+        border-bottom: 2rem solid #41198F;
+    }
+    .DropdownButton
+    {
+        height: 2.6rem;
+        font-size: 0.8rem;
+        line-height: 2.6rem;
+        border: none;
+        background-color:#41198F;
+        color: white;
+    }
+    .DropdownButton:link, .DropdownButton:visited, .DropdownButton:hover, .DropdownButton:active
+    {
+        color: white;
+    }
+/*#endregion*/
+
 /*#region TOP NAVBAR Profile button*/
     .ProfileButton
     {
@@ -377,25 +415,25 @@ transform: scale(1);
 /*#endregion*/
 
 /*#region TOP NAVBAR Profile button DROPDOWN*/
-.ProfileDropdown, .ProfileDropdown > *
-{
-    display: none;
-}
-.ProfileButton:focus + .ProfileDropdown, .ProfileDropdown > *
-{
-    display: block;
-}
-.ProfileDropdown
-{
-    width: 10rem;
-    margin-top: 3.1rem;
-    margin-left: -0.75rem;
-    border: 1px solid var(--lightestgray);
-    border-radius: 1.5rem;
-    position: absolute;
-    background-color:var(--bg);
-    overflow: hidden;
-}
+    .ProfileDropdown, .ProfileDropdown > *
+    {
+        display: none;
+    }
+    .ProfileButton:focus + .ProfileDropdown, .ProfileDropdown > *
+    {
+        display: block;
+    }
+    .ProfileDropdown
+    {
+        position: absolute;
+        width: 10rem;
+        margin-top: 3.1rem;
+        margin-left: -0.75rem;
+        border: 1px solid transparent;
+        border-radius: 1.5rem;
+        position: absolute;
+        background-color:#41198F;
+    }
 /*#endregion*/
 
 /*#region TOP NAVBAR Language button*/
@@ -436,15 +474,14 @@ transform: scale(1);
     }
     .LangDropdown
     {
-        position: absolute !important;
+        position: absolute;
         width: 10rem;
         margin-top: 0.5rem;
         margin-left: -1.75rem;
-        border: 1px solid var(--lightestgray);
+        border: 1px solid transparent;
         border-radius: 1.5rem;
         position: absolute;
-        background-color: var(--bg);
-        overflow: hidden;
+        background-color:#41198F;
     }
 /*#endregion*/
 
@@ -660,7 +697,7 @@ transform: scale(1);
     {
         width: 2rem;
         height: 2rem;
-        border: 1px solid var(--lightergray);
+        border: 1px solid var(--bordergray);
         font-size: 1.5rem;
         line-height: 1.8rem;
         border-radius: 50%;

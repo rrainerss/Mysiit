@@ -19,7 +19,7 @@
         <nav class="navbar MaxWidth mx-auto navbar-expand-md">
             <div class="navbar w-50 w-md-100 p-0">
                 <ul class="navbar-nav mr-auto">
-                    <a class="navbar-brand px-0 py-0" href="#">
+                    <a class="navbar-brand px-0 py-0" href="index.html">
                         <img src="images/Mysiit_logo.svg" width="100" height="40" alt="Mysiit">
                     </a>
                 </ul>
@@ -39,23 +39,34 @@
             <div class="navbar w-50 w-md-100 p-0">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown d-flex ml-auto ml-md-3">
-                        <button class="PillElement LangButton ShrinkNavButton p-0 pr-3 m-0" type="button" id="LangDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!--Remove d-none below to enable language button-->
+                        <button class="d-none PillElement LangButton ShrinkNavButton p-0 pr-3 m-0" type="button" id="LangDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <p class="IconText m-0">English</p>
                         </button>
-                        <div class="LangDropdown ShrinkDropdown mt-2 py-0 dropdown-menu" aria-labelledby="LangDropdownButton">
+                        <div class="LangDropdown ShrinkDropdown mt-2 py-0 dropdown-menu my-4" aria-labelledby="LangDropdownButton">
+                            <div class="text-center">
+                                <div class="Triangle text-center"></div>
+                            </div>
                             <a class="DropdownButton text-center" href="#">Latvian</a>
                             <a class="DropdownButton text-center" href="#">Lithuanian</a>
+                            <br>
                         </div>
                     </li>
                     <li class="nav-item dropdown d-none d-md-flex ml-3">
-                        <!--Remove onclick to use as a dropdown, arrow icon is hidden in index.css .ProfileButton-->
-                        <button onclick="window.location.href='login.html'" class="PillElement ProfileButton ShrinkNavButton p-0 m-0 dropdown-toggle" type="button" id="ProfileDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <p class="IconText m-0"><b>Login</b></p>
-                        </button>
-                        <!--Remove d-none to activate dropdown-->
-                        <div class="ProfileDropdown ShrinkDropdown mt-2 py-0 dropdown-menu d-none" aria-labelledby="ProfileDropdownButton">
-                            <a class="DropdownButton text-center" href="login.html">Login</a>
-                        </div>
+                        <li class="nav-item dropdown d-flex ml-auto ml-md-3">
+                            <button class="PillElement ProfileButton p-0 m-0 dropdown-toggle" type="button" id="ProfileDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <p class="IconText m-0"><b>Profile</b></p>
+                            </button>
+                            <div class="ProfileDropdown mt-2 py-0 dropdown-menu my-4" aria-labelledby="ProfileDropdownButton">
+                                <div class="text-center">
+                                    <div class="Triangle text-center"></div>
+                                </div>
+                                <a class="DropdownButton text-center" href="#">Profile</a>
+                                <a class="DropdownButton text-center" href="#">Favourites</a>
+                                <a class="DropdownButton text-center" href="#">Log out</a>
+                                <br>
+                            </div>
+                        </li>
                     </li>
                 </ul>
             </div>
@@ -255,10 +266,10 @@
         <div class="swiper mb-3">
             <div class="MaxWidth row w-100 my-4 mx-0">
                 <div class="col-12 col-sm-8 order-2 order-sm-1 px-0">
-                    <h1 class="MediumH1"><b>Fastest food</b></h1>
+                    <h1 class="MediumH1 DarkGrayText"><b>Fastest food</b></h1>
                 </div>
                 <div class="DesktopCardNav col-12 col-sm-4 order-1 order-sm-2 px-0 d-flex align-items-center justify-content-start justify-content-sm-end">
-                    <a class="mr-3" href="all.html">Show (879)</a>
+                    <a class="mr-3" href="category.html">Show (879)</a>
                     <button class="CustomSwiperButtonPrevious CardNavButton">&lt</button>
                     <button class="CustomSwiperButtonNext ml-2 CardNavButton">&gt</button>
                 </div>
@@ -284,11 +295,11 @@
                         <div class="row mx-2 mt-2 CardXDivider"></div>
                         <div class="row mx-2 SmallerCardText">
                             <div class="d-flex align-items-center">
-                                <p class="my-3 ColorText2">Open</p>
+                                <p class="my-3 ColorText2 mr-1">Open</p>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3" src="icons/heart.png" width="12" height="12">
+                                <img class="my-3 mx-1" src="icons/heart.png" width="12" height="12">
                                 <div class="CardYDivider mx-2"></div>
-                                <div class="my-3 d-inline-flex align-items-center">
+                                <div class="my-3 mx-1 d-inline-flex align-items-center">
                                     <p class="mb-0">€</p>
                                     <p class="mb-0">€</p>
                                     <p class="mb-0 LightGrayText">€</p>
@@ -296,8 +307,8 @@
                                     <p class="mb-0 LightGrayText">€</p>
                                 </div>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3 mr-1" src="icons/smile.png" width="10" height="10">
-                                <p class="my-3 mb-0">8,2</p>
+                                <img class="my-3 mx-1" src="icons/smile.png" width="10" height="10">
+                                <p class="my-3 mr-1 mb-0">8,2</p>
                                 <div class="CardYDivider mx-2"></div>                                
                             </div>
                             <button class="my-2 CardReserveButton ml-auto" type="button">Reserve</button>
@@ -324,11 +335,11 @@
                         <div class="row mx-2 mt-2 CardXDivider"></div>
                         <div class="row mx-2 SmallerCardText">
                             <div class="d-flex align-items-center">
-                                <p class="my-3 ColorText2">Open</p>
+                                <p class="my-3 ColorText2 mr-1">Open</p>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3" src="icons/heart.png" width="12" height="12">
+                                <img class="my-3 mx-1" src="icons/heart.png" width="12" height="12">
                                 <div class="CardYDivider mx-2"></div>
-                                <div class="my-3 d-inline-flex align-items-center">
+                                <div class="my-3 mx-1 d-inline-flex align-items-center">
                                     <p class="mb-0">€</p>
                                     <p class="mb-0">€</p>
                                     <p class="mb-0 LightGrayText">€</p>
@@ -336,8 +347,8 @@
                                     <p class="mb-0 LightGrayText">€</p>
                                 </div>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3 mr-1" src="icons/smile.png" width="10" height="10">
-                                <p class="my-3 mb-0">8,2</p>
+                                <img class="my-3 mx-1" src="icons/smile.png" width="10" height="10">
+                                <p class="my-3 mr-1 mb-0">8,2</p>
                                 <div class="CardYDivider mx-2"></div>                                
                             </div>
                             <button class="my-2 CardReserveButton ml-auto" type="button">Reserve</button>
@@ -364,11 +375,11 @@
                         <div class="row mx-2 mt-2 CardXDivider"></div>
                         <div class="row mx-2 SmallerCardText">
                             <div class="d-flex align-items-center">
-                                <p class="my-3 ColorText2">Open</p>
+                                <p class="my-3 ColorText2 mr-1">Open</p>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3" src="icons/heart.png" width="12" height="12">
+                                <img class="my-3 mx-1" src="icons/heart.png" width="12" height="12">
                                 <div class="CardYDivider mx-2"></div>
-                                <div class="my-3 d-inline-flex align-items-center">
+                                <div class="my-3 mx-1 d-inline-flex align-items-center">
                                     <p class="mb-0">€</p>
                                     <p class="mb-0">€</p>
                                     <p class="mb-0 LightGrayText">€</p>
@@ -376,8 +387,8 @@
                                     <p class="mb-0 LightGrayText">€</p>
                                 </div>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3 mr-1" src="icons/smile.png" width="10" height="10">
-                                <p class="my-3 mb-0">8,2</p>
+                                <img class="my-3 mx-1" src="icons/smile.png" width="10" height="10">
+                                <p class="my-3 mr-1 mb-0">8,2</p>
                                 <div class="CardYDivider mx-2"></div>                                
                             </div>
                             <button class="my-2 CardReserveButton ml-auto" type="button">Reserve</button>
@@ -404,11 +415,11 @@
                         <div class="row mx-2 mt-2 CardXDivider"></div>
                         <div class="row mx-2 SmallerCardText">
                             <div class="d-flex align-items-center">
-                                <p class="my-3 ColorText2">Open</p>
+                                <p class="my-3 ColorText2 mr-1">Open</p>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3" src="icons/heart.png" width="12" height="12">
+                                <img class="my-3 mx-1" src="icons/heart.png" width="12" height="12">
                                 <div class="CardYDivider mx-2"></div>
-                                <div class="my-3 d-inline-flex align-items-center">
+                                <div class="my-3 mx-1 d-inline-flex align-items-center">
                                     <p class="mb-0">€</p>
                                     <p class="mb-0">€</p>
                                     <p class="mb-0 LightGrayText">€</p>
@@ -416,8 +427,8 @@
                                     <p class="mb-0 LightGrayText">€</p>
                                 </div>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3 mr-1" src="icons/smile.png" width="10" height="10">
-                                <p class="my-3 mb-0">8,2</p>
+                                <img class="my-3 mx-1" src="icons/smile.png" width="10" height="10">
+                                <p class="my-3 mr-1 mb-0">8,2</p>
                                 <div class="CardYDivider mx-2"></div>                                
                             </div>
                             <button class="my-2 CardReserveButton ml-auto" type="button">Reserve</button>
@@ -444,11 +455,11 @@
                         <div class="row mx-2 mt-2 CardXDivider"></div>
                         <div class="row mx-2 SmallerCardText">
                             <div class="d-flex align-items-center">
-                                <p class="my-3 ColorText2">Open</p>
+                                <p class="my-3 ColorText2 mr-1">Open</p>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3" src="icons/heart.png" width="12" height="12">
+                                <img class="my-3 mx-1" src="icons/heart.png" width="12" height="12">
                                 <div class="CardYDivider mx-2"></div>
-                                <div class="my-3 d-inline-flex align-items-center">
+                                <div class="my-3 mx-1 d-inline-flex align-items-center">
                                     <p class="mb-0">€</p>
                                     <p class="mb-0">€</p>
                                     <p class="mb-0 LightGrayText">€</p>
@@ -456,8 +467,8 @@
                                     <p class="mb-0 LightGrayText">€</p>
                                 </div>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3 mr-1" src="icons/smile.png" width="10" height="10">
-                                <p class="my-3 mb-0">8,2</p>
+                                <img class="my-3 mx-1" src="icons/smile.png" width="10" height="10">
+                                <p class="my-3 mr-1 mb-0">8,2</p>
                                 <div class="CardYDivider mx-2"></div>                                
                             </div>
                             <button class="my-2 CardReserveButton ml-auto" type="button">Reserve</button>
@@ -484,11 +495,11 @@
                         <div class="row mx-2 mt-2 CardXDivider"></div>
                         <div class="row mx-2 SmallerCardText">
                             <div class="d-flex align-items-center">
-                                <p class="my-3 ColorText2">Open</p>
+                                <p class="my-3 ColorText2 mr-1">Open</p>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3" src="icons/heart.png" width="12" height="12">
+                                <img class="my-3 mx-1" src="icons/heart.png" width="12" height="12">
                                 <div class="CardYDivider mx-2"></div>
-                                <div class="my-3 d-inline-flex align-items-center">
+                                <div class="my-3 mx-1 d-inline-flex align-items-center">
                                     <p class="mb-0">€</p>
                                     <p class="mb-0">€</p>
                                     <p class="mb-0 LightGrayText">€</p>
@@ -496,8 +507,8 @@
                                     <p class="mb-0 LightGrayText">€</p>
                                 </div>
                                 <div class="CardYDivider mx-2"></div>
-                                <img class="my-3 mr-1" src="icons/smile.png" width="10" height="10">
-                                <p class="my-3 mb-0">8,2</p>
+                                <img class="my-3 mx-1" src="icons/smile.png" width="10" height="10">
+                                <p class="my-3 mr-1 mb-0">8,2</p>
                                 <div class="CardYDivider mx-2"></div>                                
                             </div>
                             <button class="my-2 CardReserveButton ml-auto" type="button">Reserve</button>
@@ -514,10 +525,10 @@
         <div class="swiper mb-3">
             <div class="MaxWidth row w-100 my-4 mx-0">
                 <div class="col-12 col-sm-8 order-2 order-sm-1 px-0">
-                    <h1 class="MediumH1"><b>Categories</b></h1>
+                    <h1 class="MediumH1 DarkGrayText"><b>Categories</b></h1>
                 </div>
                 <div class="DesktopCardNav col-12 col-sm-4 order-1 order-sm-2 px-0 d-flex align-items-center justify-content-start justify-content-sm-end">
-                    <a class="mr-3" href="all.html">Show (18)</a>
+                    <a class="mr-3" href="category.html">Show (18)</a>
                     <button class="CustomSwiperButtonPrevious CardNavButton">&lt</button>
                     <button class="CustomSwiperButtonNext ml-2 CardNavButton">&gt</button>
                 </div>
@@ -661,10 +672,10 @@
         <div class="swiper mb-3">
             <div class="MaxWidth row w-100 my-4 mx-0">
                 <div class="col-12 col-sm-8 order-2 order-sm-1 px-0">
-                    <h1 class="MediumH1"><b>Categories</b></h1>
+                    <h1 class="MediumH1 DarkGrayText"><b>Mysiit specials</b></h1>
                 </div>
                 <div class="DesktopCardNav col-12 col-sm-4 order-1 order-sm-2 px-0 d-flex align-items-center justify-content-start justify-content-sm-end">
-                    <a class="mr-3" href="all.html">Show (18)</a>
+                    <a class="mr-3" href="category.html">Show (24)</a>
                     <button class="CustomSwiperButtonPrevious CardNavButton">&lt</button>
                     <button class="CustomSwiperButtonNext ml-2 CardNavButton">&gt</button>
                 </div>
@@ -682,13 +693,171 @@
                     </div>
                 </div>
 
-                <div class="CardBox EndSlide swiper-slide LargeCard container-fluid p-0 h-auto">
+                <div class="CardBox swiper-slide LargeCard container-fluid p-0 h-auto">
                     <div class="h-100 mx-1 mx-md-2">
                         <div class="row w-100 m-0">
                             <a class="ClickableImage" href="restaurant.html">
                                 <img class="col p-0 w-100 img-fluid" src="images/specials_2.png" alt="">
                                 <p class="CardOverlayText">New restaurant in Riga</p>
                             </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CardBox EndSlide swiper-slide LargeCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/specials_1.png" alt="">
+                                <p class="CardOverlayText">Pasta restaurant</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>        
+    </div>
+
+    <!-- Card row #4 -->
+    <div class="MaxSwiperWidth mx-auto">
+        <div class="swiper mb-3">
+            <div class="MaxWidth row w-100 my-4 mx-0">
+                <div class="col-12 col-sm-8 order-2 order-sm-1 px-0">
+                    <h1 class="MediumH1 DarkGrayText"><b>Mysiit around the world</b></h1>
+                </div>
+                <div class="DesktopCardNav col-12 col-sm-4 order-1 order-sm-2 px-0 d-flex align-items-center justify-content-start justify-content-sm-end">
+                    <a class="mr-3" href="category.html">Show (18)</a>
+                    <button class="CustomSwiperButtonPrevious CardNavButton">&lt</button>
+                    <button class="CustomSwiperButtonNext ml-2 CardNavButton">&gt</button>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+
+                <div class="CardBox StartSlide swiper-slide SmallCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/world_1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mt-4 pt-1 PaddedRow">
+                            <h6 class="col p-0 mb-0"><b>Riga</b></h6>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mb-3 PaddedRow">
+                            <p class="col p-0 mb-0 SmallCardText GrayText">32 restaurants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CardBox swiper-slide SmallCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/world_2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mt-4 pt-1 PaddedRow">
+                            <h6 class="col p-0 mb-0"><b>Paris</b></h6>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mb-3 PaddedRow">
+                            <p class="col p-0 mb-0 SmallCardText GrayText">32 restaurants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CardBox swiper-slide SmallCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/world_3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mt-4 pt-1 PaddedRow">
+                            <h6 class="col p-0 mb-0"><b>Spain</b></h6>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mb-3 PaddedRow">
+                            <p class="col p-0 mb-0 SmallCardText GrayText">32 restaurants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CardBox swiper-slide SmallCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/world_4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mt-4 pt-1 PaddedRow">
+                            <h6 class="col p-0 mb-0"><b>Norway</b></h6>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mb-3 PaddedRow">
+                            <p class="col p-0 mb-0 SmallCardText GrayText">32 restaurants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CardBox swiper-slide SmallCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/world_5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mt-4 pt-1 PaddedRow">
+                            <h6 class="col p-0 mb-0"><b>Canada</b></h6>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mb-3 PaddedRow">
+                            <p class="col p-0 mb-0 SmallCardText GrayText">32 restaurants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CardBox swiper-slide SmallCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/world_5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mt-4 pt-1 PaddedRow">
+                            <h6 class="col p-0 mb-0"><b>Canada</b></h6>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mb-3 PaddedRow">
+                            <p class="col p-0 mb-0 SmallCardText GrayText">32 restaurants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CardBox swiper-slide SmallCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/world_5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mt-4 pt-1 PaddedRow">
+                            <h6 class="col p-0 mb-0"><b>Canada</b></h6>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mb-3 PaddedRow">
+                            <p class="col p-0 mb-0 SmallCardText GrayText">32 restaurants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CardBox EndSlide swiper-slide SmallCard container-fluid p-0 h-auto">
+                    <div class="h-100 mx-1 mx-md-2">
+                        <div class="row w-100 m-0">
+                            <a class="ClickableImage" href="restaurant.html">
+                                <img class="col p-0 w-100 img-fluid" src="images/world_6.png" alt="">
+                            </a>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mt-4 pt-1 PaddedRow">
+                            <h6 class="col p-0 mb-0"><b>Lithuania</b></h6>
+                        </div>
+                        <div class="row w-100 m-0 mx-2 mb-3 PaddedRow">
+                            <p class="col p-0 mb-0 SmallCardText GrayText">32 restaurants</p>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,51 @@
+/*#region Descriptive header*/
+    .HeaderContainer
+    {
+        height: 20rem;
+        border-radius: 0.75rem;
+        background-image: url('images/descriptive_header.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .BackButton
+    {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        line-height: 2.45rem;
+        font-size: 1.6rem;
+        border: 1px solid var(--bordergray);
+        font-weight: 300;
+    }
+    .BackButton:active, .BackButton:hover, .PhotoButton:active, .PhotoButton:hover
+    {
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
+        color: white;
+        transition: all 150ms linear;
+    }
+    .PhotoButton
+    {
+        width: 9rem;
+        font-weight: 500;
+        font-size: 0.7rem;
+        line-height: 2.4rem;
+    }
+    .HeaderLargeText
+    {
+        color: white;
+        font-size: 2rem;
+    }
+    .HeaderSmallText
+    {
+        color: white;
+        max-width: 50rem;
+        font-size: 0.9rem;
+    }
+    .HeaderReadMore:link, .HeaderReadMore:visited, .HeaderReadMore:hover, .HeaderReadMore:active
+    {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: white;
+    }
+/*#endregion*/

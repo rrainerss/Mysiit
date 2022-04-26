@@ -1,0 +1,193 @@
+/*#region Tag section*/
+    .TagSection
+    {
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: grab !important;
+    }
+    .TagButton
+    {
+        cursor: pointer !important;
+        background-color: var(--bg);
+        border: 1px solid var(--bordergray);
+        color: var(--lightgray);
+        font-weight: 600;
+        width: auto;
+    }
+/*#endregion*/
+
+/*#region Tagline filter button*/
+    .TaglineFilterButton
+    {
+        width: 2.6rem;
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
+        color: white;
+        font-weight: 400;
+    }
+    .TaglineFilterButton > p::before
+    {
+        background-image: url("icons/filter.png");
+        margin-left: -0.275rem;
+        margin-top: 0.75rem;
+        background-size: 1rem 1rem;
+        width: 1rem;
+        height: 1rem;
+    }
+    .TaglineFilterButton:active, .TaglineFilterButton:hover
+    {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        transition: all 150ms linear;
+    }
+/*#endregion*/
+
+/*#region All cards*/
+    .AllCards
+    {
+
+    }
+    .MediumStaticCard
+    {
+        width: 33.33%;
+        cursor: auto;
+    }        
+    @media only screen and (min-width: 1430px)
+    {
+        .MediumStaticCard
+        {
+            width: 25%;
+        }        
+    }
+    @media only screen and (min-width: 1754px)
+    {
+        .MediumStaticCard
+        {
+            width: 20%;
+        }        
+    }
+    @media only screen and (min-width: 2200px)
+    {
+        .MediumStaticCard
+        {
+            width: 16.65%;
+        }        
+    }
+/*#endregion*/
+
+/*#region Restaurant/Calendar overlay*/
+    .CloseOverlay
+    {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: none;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: var(--lightgray);
+        background-color: var(--bg);
+        font-weight: 200;
+    }
+    .CloseOverlay:active, .CloseOverlay:focus, .CloseOverlay:hover
+    {
+        transition: all 150ms linear;
+        color: white;
+        background-color: var(--purple);
+    }
+/*#endregion*/
+
+/*#region Restaurant overlay*/
+    .RestaurantOverlayContainer
+    {
+        width: 32rem;
+        height: 70%;
+        margin: auto;
+        margin-top: 5%;
+        background-color: var(--bg);
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    .ImageHalf
+    {
+        height: 50%;
+        background-image: url('images/rest_popup.png');
+        background-size: cover;
+        background-position: center;
+    }
+/*#endregion*/
+
+/*#region Calendar overlay*/
+    .CalendarOverlayContainer
+    {
+        width: 26rem;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+    }
+    .CloseCalendarOverlay
+    {
+        width: 26rem;
+        position: absolute;
+    }
+/*#endregion*/
+
+/*#region Calendar*/
+    .CalendarWrapper
+    {
+        background-color: white;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .CalendarLine
+    {
+        border: 1px solid var(--lightestgray);
+    }
+    .InnerBox
+    {
+        max-width: 22rem;
+    }
+    .CheckInText
+    {
+        font-weight: 600;
+        font-size: 1rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        background-color: var(--purple);
+        color: white;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+    .CheckInButton
+    {
+        background-color: var(--green);
+        border: 1px solid var(--green);
+        width: 12rem;
+        font-weight: bold;
+        line-height: 2.4rem;
+        color: white;
+    }
+    .CheckInButton:hover
+    {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        transition: all 150ms;
+    }
+    .TimePill
+    {
+        height: 3.2rem;
+        line-height: 3.1rem;
+        background: url("icons/time.png") no-repeat left;
+        background-size: 1.1rem;
+        background-position-x: 0.8rem;
+    }
+    .GuestsPill
+    {
+        height: 3.2rem;
+        line-height: 3.1rem;
+        background: url("icons/guest.png") no-repeat left;
+        background-size: 1.1rem;
+        background-position-x: 0.8rem;
+    }
+/*#endregion*/
