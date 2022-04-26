@@ -161,6 +161,14 @@
             {
                 padding: 0 1rem 0 1rem;
             }
+            .StartSlide
+            {
+                margin-left: 0.75rem;
+            }
+            .EndSlide
+            {
+                margin-right: 0.75rem;
+            }
         }
     /*SM*/
         @media only screen and (min-width: 576px) and (max-width: 767px)
@@ -168,6 +176,14 @@
             .MaxWidth
             {
                 padding: 0 1rem 0 1rem;
+            }
+            .StartSlide
+            {
+                margin-left: 0.75rem;
+            }
+            .EndSlide
+            {
+                margin-right: 0.75rem;
             }
         }
     /*MD*/
@@ -177,6 +193,14 @@
             {
                 padding: 0 1.5rem 0 1.5rem;
             }
+            .StartSlide
+            {
+                margin-left: 1rem;
+            }
+            .EndSlide
+            {
+                margin-right: 1rem;
+            }
         }
     /*LG*/
         @media only screen and (min-width: 992px) and (max-width: 1199px)
@@ -185,6 +209,14 @@
             {
                 padding: 0 2rem 0 2rem;
             }
+            .StartSlide
+            {
+                margin-left: 1.5rem;
+            }
+            .EndSlide
+            {
+                margin-right: 1.5rem;
+            }
         }
     /*XL*/
         @media only screen and (min-width: 1200px)
@@ -192,6 +224,14 @@
             .MaxWidth
             {
                 padding: 0 2.5rem 0 2.5rem;
+            }
+            .StartSlide
+            {
+                margin-left: 2rem;
+            }
+            .EndSlide
+            {
+                margin-right: 2rem;
             }
         }
 /*#endregion*/
@@ -409,7 +449,6 @@ transform: scale(1);
 /*#endregion*/
 
 
-
 /*#region CONTENT Custom header*/
     .HeaderSizingBox
     {
@@ -580,6 +619,38 @@ transform: scale(1);
 /*#endregion*/
 
 
+/*#region CONTENT Card sizes*/
+    .LargeCard
+    {
+        width: 40rem;
+    }
+    .LargeCard img
+    {
+        aspect-ratio: 752 / 359;
+        border-radius: 0.3rem;
+    }
+    .MediumCard
+    {
+        width: 22rem;
+    }
+    .MediumCard img
+    {
+        aspect-ratio: 422 / 248;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+    }
+    .SmallCard
+    {
+        width: 15rem;
+    }
+    .SmallCard img
+    {
+        aspect-ratio: 230 / 257;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+    }
+/*#endregion*/
+
 /*#region CONTENT Cards*/
     .DesktopCardNav > a:link, .DesktopCardNav > a:visited, .DesktopCardNav > a:hover, .DesktopCardNav > a:active
     {
@@ -601,56 +672,43 @@ transform: scale(1);
         background-color: var(--lightgray);
         transition: all 150ms linear;
     }
-        .CardBox
-        {
-            border-radius: 0.3rem;
-            cursor: -webkit-grab;
-            cursor: grab;
-        }
-        .CardBox > div
-        {
-            border: 1px solid var(--bordergray);
-            border-radius: 0.3rem;
-        }
-        .MediumCard
-        {
-            width: 22rem;
-        }
-        .MediumCard img
-        {
-            aspect-ratio: 422 / 248;
-            border-top-left-radius: 0.3rem;
-            border-top-right-radius: 0.3rem;
-        }
-            .SmallCard img
-            {
-                aspect-ratio: 385 / 449;
-                border-radius: 0.3rem;
-            }
-        .CardXDivider
-        {
-            border-top: 1px solid var(--bordergray);
-        }
-        .CardYDivider
-        {
-            border: 0.5px solid var(--bordergray);
-            height: 1.9rem;
-        }
-        .CardReserveButton
-        {
-            border: 1px solid var(--green);
-            background-color: var(--green);
-            color: white;
-            border-radius: 0.95rem;
-            height: 1.9rem;
-            width: 5rem;
-        }
-
-
+    .CardBox
+    {
+        border-radius: 0.3rem;
+        cursor: -webkit-grab;
+        cursor: grab;
+    }
+    .CardBox > div
+    {
+        border: 1px solid var(--bordergray);
+        border-radius: 0.3rem;
+    }
+    .CardXDivider
+    {
+        border-top: 1px solid var(--bordergray);
+    }
+    .CardYDivider
+    {
+        border: 0.5px solid var(--bordergray);
+        height: 1.9rem;
+    }
+    .CardReserveButton
+    {
+        border: 1px solid var(--green);
+        background-color: var(--green);
+        color: white;
+        border-radius: 0.95rem;
+        height: 1.9rem;
+        width: 5rem;
+    }
     .ClickableImage:hover > img, .ClickableImage:active > img
     {
         filter: brightness(50%);
         transition: all 150ms linear;
+    }
+    .ClickableImage:link, .ClickableImage:visited, .ClickableImage:hover, .ClickableImage:active
+    {
+        color: white;
     }
     .SmallCardText
     {
@@ -670,8 +728,14 @@ transform: scale(1);
     {
         justify-content: right !important;
     }
-
-
+    .CardOverlayText
+    {
+        position: relative;
+        margin-top: -3rem;
+        margin-left: 1.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
 /*#endregion*/
 
 
