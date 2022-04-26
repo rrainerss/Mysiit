@@ -1,0 +1,995 @@
+/*#region General styles and links*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    :root
+    {
+        --darkergray: #3f3f3f;
+        --darkgray: #525353;
+        --normalgray: #8d8d8d;
+        --lightgray: #b2b2b2;
+        --lightergray: #b3b3b3;
+        --bordergray: #d9d9d9;
+        --lightestgray: #eeeeee;
+        --transparentgray: rgba(53, 53, 53, 0.904);
+
+        --bg: #f6f7f6;
+        --black: #212120;
+        --purple: #41198F;
+        --green: #00c400;
+    }
+    *
+    {
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus
+    {
+        outline: none;
+    }
+    html, body
+    {
+        background-color: var(--bg);
+    }
+    .navbar
+    {
+        height: 6rem;
+        z-index: 2;
+    }
+    .dropdown-toggle::after
+    {
+        display: none !important;
+    }
+    .ScrollDisabled
+    {
+        position: fixed;
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .NavbarLine
+    {
+        border-bottom: 1px solid var(--bordergray);
+    }
+/*#endregion*/
+
+/*#region Used for multiple elements*/
+    .PillElement
+    {
+        height: 2.6rem;
+        width: 8.5rem;
+        border: 1px solid var(--lightergray);
+        border-radius: 1.5rem;
+        font-size: 0.8rem;
+        line-height: 2.6rem;
+        font-weight: lighter;
+    }
+    .IconText::before, .IconText::after
+    {
+        display: block;
+        content: '';
+        position: absolute;
+        background-size: 1.3rem 1.3rem;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    .IconText::before
+    {
+        margin-left: 0.8rem;
+        margin-top: 0.58rem;
+    }
+    .IconText::after
+    {
+        margin-left: 6.3rem;
+        margin-top: -2.05rem;
+    }
+    .VariableH1
+    {
+        font-size: clamp(1.9rem, 4vw, 2.6rem);
+    }
+    .MediumH1
+    {
+        font-size: 1.5rem;
+    }
+    .DividerLine
+    {
+        border-bottom: 1px solid var(--bordergray);
+    }
+    .DropdownButton
+    {
+        height: 2.6rem;
+        font-size: 0.8rem;
+        line-height: 2.6rem;
+        border: none;
+        background-color: var(--bg);
+    }
+    .DropdownButton:link, .DropdownButton:visited, .DropdownButton:hover, .DropdownButton:active
+    {
+        text-decoration: none;
+        color: var(--black);
+    }
+    .DropdownButton:hover, .DropdownButton:active
+    {
+        background-color: var(--green);
+        transition: all 150ms linear;
+    }
+    .BoxShadow
+    {
+        box-shadow:
+        0px 2.7px 5.3px rgba(0, 0, 0, 0.06),
+        0px 8.9px 15px rgba(0, 0, 0, 0.09),
+        0px 18px 18px rgba(0, 0, 0, 0.18);
+        -webkit-box-shadow:
+        0px 2.7px 5.3px rgba(0, 0, 0, 0.06),
+        0px 8.9px 15px rgba(0, 0, 0, 0.09),
+        0px 18px 18px rgba(0, 0, 0, 0.18);
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1199px) /*991*/
+    {
+        .ShrinkNavButton
+        {
+            width: 3rem !important;
+            color: transparent !important;
+        }
+        .LangDropdown.ShrinkDropdown
+        {
+            margin-left: -1.65rem !important;
+        }
+        .ProfileDropdown.ShrinkDropdown
+        {
+            margin-left: -5.75rem !important;
+        }
+    }
+    @media only screen and (max-width: 767px)
+    {
+        .LangDropdown
+        {
+            margin-left: -3.5rem !important;
+        }
+    }
+/*#endregion*/
+
+/*#region Page width and spacing from sides*/
+    .MaxSwiperWidth
+    {
+        padding: 0 0 0 0;
+    }
+    /*XS*/
+        @media only screen and (min-width: 0px) and (max-width: 575px)
+        {
+            .MaxWidth
+            {
+                padding: 0 1rem 0 1rem;
+            }
+        }
+    /*SM*/
+        @media only screen and (min-width: 576px) and (max-width: 767px)
+        {
+            .MaxWidth
+            {
+                padding: 0 1rem 0 1rem;
+            }
+        }
+    /*MD*/
+        @media only screen and (min-width: 768px) and (max-width: 991px)
+        {
+            .MaxWidth
+            {
+                padding: 0 1.5rem 0 1.5rem;
+            }
+        }
+    /*LG*/
+        @media only screen and (min-width: 992px) and (max-width: 1199px)
+        {
+            .MaxWidth
+            {
+                padding: 0 2rem 0 2rem;
+            }
+        }
+    /*XL*/
+        @media only screen and (min-width: 1200px)
+        {
+            .MaxWidth
+            {
+                padding: 0 2.5rem 0 2.5rem;
+            }
+        }
+/*#endregion*/
+
+/*#region Text colors*/
+    .ColorText
+    {
+        color: var(--purple);
+    }
+    .ColorText2
+    {
+        color: var(--green);
+    }
+    .DarkGrayText
+    {
+        color: var(--darkergray);
+    }
+    .GrayText
+    {
+        color: var(--normalgray);
+    }
+    .LightGrayText, .LightGrayText:link, .LightGrayText:visited, .LightGrayText:hover, .LightGrayText:active
+    {
+        color: var(--lightgray);
+    }
+/*#endregion*/
+
+/*#region Checkbox*/
+.CheckboxLabel
+{
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+.CustomCheckbox
+{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid gray;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+.CustomCheckbox::before
+{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: top;
+    transition: 150ms all;
+    box-shadow: inset 1em 1em white;
+}
+.CustomCheckbox:checked
+{
+    background-color: var(--green);
+    border: var(--green);
+}
+.CustomCheckbox:checked::before
+{
+transform: scale(1);
+}
+/*#endregion*/
+
+
+/*#region TOP NAVBAR Search box*/
+    .SearchBox
+    {
+        font-weight: 500;
+        padding-top: 0.1rem;
+        width: 13rem;
+        background-color: white !important;
+        color: var(--black);
+        background: url("icons/loupe.png") no-repeat left;
+        background-size: 1.4rem;
+        background-position-x: 0.8rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }::placeholder
+    {
+        color: var(--black);
+    }
+/*#endregion*/
+
+/*#region TOP NAVBAR Filter button*/
+    .FilterButton
+    {
+        width: 6rem;
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
+        color: white;
+        font-weight: 400;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .FilterButton > p::before
+    {
+        background-image: url("icons/filter.png");
+        margin-left: -0.25rem;
+        margin-top: 0.75rem;
+        background-size: 1rem 1rem;
+        width: 1rem;
+        height: 1rem;
+    }
+    .FilterButton:active, .FilterButton:hover
+    {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        transition: all 150ms linear;
+    }
+/*#endregion*/
+
+/*#region TOP NAVBAR Profile button*/
+    .ProfileButton
+    {
+        color: var(--bg);
+        border: 1px solid var(--darkergray);
+        background-color: var(--darkergray);
+    }
+    .ProfileButton > p::before
+    {
+        background-image: url("icons/account_white.png");
+    }
+    .ProfileButton > p::after
+    {
+        display: none; /*Remove to show dropdown arrow*/
+        background-image: url("icons/down_arrow.png");
+        background-size: 1.4rem 1.4rem;
+        background-repeat: no-repeat;
+    }
+    .ProfileButton:active, .ProfileButton:hover
+    {
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
+        transition: all 150ms linear;
+    }
+/*#endregion*/
+
+/*#region TOP NAVBAR Profile button DROPDOWN*/
+.ProfileDropdown, .ProfileDropdown > *
+{
+    display: none;
+}
+.ProfileButton:focus + .ProfileDropdown, .ProfileDropdown > *
+{
+    display: block;
+}
+.ProfileDropdown
+{
+    width: 10rem;
+    margin-top: 3.1rem;
+    margin-left: -0.75rem;
+    border: 1px solid var(--lightestgray);
+    border-radius: 1.5rem;
+    position: absolute;
+    background-color:var(--bg);
+    overflow: hidden;
+}
+/*#endregion*/
+
+/*#region TOP NAVBAR Language button*/
+    .LangButton
+    {
+        width: 6.5rem;
+        text-align: right;
+        font-weight: 500;
+        background-color: transparent;
+        border: 1px solid transparent;
+    }
+    .LangButton > p::before
+    {
+        background-image: url("icons/globe.png");
+        background-size: 1.3rem 1.3rem;
+        background-repeat: no-repeat;
+    }
+    .LangButton > p::after
+    {
+        content: none;
+    }
+    .LangButton:active, .LangButton:hover
+    {
+        background-color: var(--green);
+        border: 1px solid var(--green);
+        transition: all 150ms linear;
+    }
+/*#endregion*/
+
+/*#region TOP NAVBAR Language button DROPDOWN*/
+    .LangDropdown, .LangDropdown > *
+    {
+        display: none;
+    }
+    .LangButton:focus + .LangDropdown, .LangDropdown > *
+    {
+        display: block;
+    }
+    .LangDropdown
+    {
+        position: absolute !important;
+        width: 10rem;
+        margin-top: 0.5rem;
+        margin-left: -1.75rem;
+        border: 1px solid var(--lightestgray);
+        border-radius: 1.5rem;
+        position: absolute;
+        background-color: var(--bg);
+        overflow: hidden;
+    }
+/*#endregion*/
+
+
+
+/*#region CONTENT Custom header*/
+    .HeaderSizingBox
+    {
+        height: 19rem;
+    }
+    .CustomHeader
+    {
+        background-image: url("images/header.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .HeaderText
+    {
+        font-weight: bold;
+        display: inline-block;
+        height: 1rem;
+    }
+    @media only screen and (max-width: 767px)
+    {
+        .HeaderSizingBox
+        {
+            height: 21rem;
+        }
+    }
+/*#endregion*/
+
+/*#region CONTENT Search section*/
+    .SearchSection
+    {
+        margin-top: -4rem;
+    }
+    .FloatingSearch
+    {
+        max-width: 56rem;
+        min-height: 6rem;
+        border: 1px solid var(--lightestgray);
+        border-radius: 1.5rem;
+        background-color: white;
+    }
+    .SearchEl1, .SearchEl2, .SearchEl3, .SearchEl4
+    {
+        background-color: white;
+        padding-left: 2.8rem;
+        font-weight: 500;
+    }
+    .SearchEl1
+    {
+        width: 62.5%;
+        background: url("icons/home.png") no-repeat left;
+        background-size: 1.4rem;
+        background-position-x: 0.8rem;
+    }
+    .SearchEl2
+    {
+        width: 35%;
+        background: url("icons/location.png") no-repeat left;
+        background-size: 1.4rem;
+        background-position-x: 0.8rem;
+    }
+    .SearchEl3
+    {
+        width: 32.5%;
+        background: url("icons/account_black.png") no-repeat left;
+        background-size: 1.4rem;
+        background-position-x: 0.8rem;
+    }
+    .SearchEl4
+    {
+        width: 37.5%;
+        background: url("icons/calendar.png") no-repeat left;
+        background-size: 1.4rem;
+        background-position-x: 0.8rem;
+    }
+    .SearchEl5
+    {
+        width: 25%;
+        background-color: var(--green);
+        border: 1px solid var(--green);
+        color: white;
+    }
+    .SearchEl5:active, .SearchEl5:hover
+    {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        transition: all 150ms linear;
+    }
+    .ValueButton
+    {
+        color: white;
+        display: inline-block;
+        border: none;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: var(--lightgray);
+        line-height: 1rem;
+        font-weight: bold;
+    }
+    .ValueButton:active
+    {
+        background-color: var(--darkgray);
+        transition: all 150ms linear;
+    }
+    .ValueButton:hover
+    {
+        background-color: var(--darkgray);
+        cursor: pointer;
+        transition: all 150ms linear;
+    }
+    .Incrementor .Decrease
+    {
+        border-radius: 50%;
+    }
+    .Incrementor .Increase
+    {
+        border-radius: 50%;
+    }
+    .IncNumber
+    {
+        text-align: center;
+        border: none;
+        margin: 0px;
+        width: 1.2rem;
+        height: 2rem;
+    }
+    .IncTime
+    {
+        text-align: center;
+        border: none;
+        margin: 0px;
+        width: 2.3rem;
+        height: 2rem;
+    }
+    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+    {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator
+    {
+        background: transparent;
+        cursor: pointer;
+        position: absolute;
+        width: 37%;
+        height: 2.6rem;
+        margin-left: -3.1rem;
+        margin-top: -0.2rem;
+        border-radius: 1.5rem;
+    }
+    @media only screen and (max-width: 575px)
+    {
+        .SearchEl1, .SearchEl2, .SearchEl3, .SearchEl4, input[type="date"]::-webkit-calendar-picker-indicator
+        {
+            width: 100%;
+        }
+        .SearchEl5
+        {
+            width: 50%;
+        }
+    }
+    @media only screen and (min-width: 992px)
+    {
+        input[type="date"]::-webkit-calendar-picker-indicator
+        {
+            margin-left: -1.6rem;
+        }
+    }
+
+/*#endregion*/
+
+
+/*#region CONTENT Cards*/
+    .DesktopCardNav > a:link, .DesktopCardNav > a:visited, .DesktopCardNav > a:hover, .DesktopCardNav > a:active
+    {
+        color: var(--darkergray);
+    }
+    .CardNavButton
+    {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid var(--lightergray);
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .CardNavButton:active
+    {
+        background-color: var(--lightgray);
+        transition: all 150ms linear;
+    }
+        .CardBox
+        {
+            border-radius: 0.3rem;
+            cursor: -webkit-grab;
+            cursor: grab;
+        }
+        .CardBox > div
+        {
+            border: 1px solid var(--bordergray);
+            border-radius: 0.3rem;
+        }
+        .MediumCard
+        {
+            width: 22rem;
+        }
+        .MediumCard img
+        {
+            aspect-ratio: 422 / 248;
+            border-top-left-radius: 0.3rem;
+            border-top-right-radius: 0.3rem;
+        }
+            .SmallCard img
+            {
+                aspect-ratio: 385 / 449;
+                border-radius: 0.3rem;
+            }
+        .CardXDivider
+        {
+            border-top: 1px solid var(--bordergray);
+        }
+        .CardYDivider
+        {
+            border: 0.5px solid var(--bordergray);
+            height: 1.9rem;
+        }
+        .CardReserveButton
+        {
+            border: 1px solid var(--green);
+            background-color: var(--green);
+            color: white;
+            border-radius: 0.95rem;
+            height: 1.9rem;
+            width: 5rem;
+        }
+
+
+    .ClickableImage:hover > img, .ClickableImage:active > img
+    {
+        filter: brightness(50%);
+        transition: all 150ms linear;
+    }
+    .SmallCardText
+    {
+        font-weight: 500;
+        font-size: 0.75rem;
+    }
+    .SmallerCardText
+    {
+        font-weight: 500;
+        font-size: 0.65rem;
+    }
+    .CardNavButton
+    {
+        display: block;
+    }
+    .DesktopCardNav
+    {
+        justify-content: right !important;
+    }
+
+
+/*#endregion*/
+
+
+/*#region FOOTER Download section*/
+.DownloadSection
+{
+    color: white;
+    background-color: var(--purple);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.DownloadButton
+{
+    background-color: var(--bg);
+    color: var(--purple);
+    font-weight: 500;
+    border: 1px solid var(--bg);
+}
+.DownloadButton:active, .DownloadButton:hover
+{
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    color: white;
+    transition: all 150ms linear;
+}
+/*#endregion*/
+
+/*#region FOOTER*/
+    .CustomFooter
+    {
+        background-color: var(--black);
+        color: var(--bg);
+        box-shadow: 0 35vh 0 35vh var(--black);
+    }
+    .FooterRow
+    {
+        border-bottom: 0.1rem solid var(--darkgray);
+    }
+    .Copyright
+    {
+        font-size: 0.7rem;
+    }
+    .CustomFooter a:link, .CustomFooter a:visited, .CustomFooter a:hover, .CustomFooter a:active
+    {
+        color: var(--bg);
+    }
+/*#endregion*/
+
+
+/*#region OVERLAY Mobile navbar*/
+    .MobileNavbar
+    {
+        position: fixed;
+        bottom: 0;
+        background-color: var(--bg);
+        color: var(--black);
+        height: 3.3rem;
+        font-size: 0.7rem;
+        z-index: 3;
+    }
+    .MobileNavbar a:link, .MobileNavbar a:visited, .MobileNavbar a:hover, .MobileNavbar a:active
+    {
+        color: var(--black);
+    }
+    .MobileNavButton
+    {
+        width: 20%;
+        border: none;
+    }
+    .MobileNavButton:active, .MobileNavButton:hover
+    {
+        background-color: var(--purple);
+        transition: all 150ms linear;
+    }
+    .MobileNavIcon
+    {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+/*#endregion*/
+
+/*#region OVERLAY Menu overlay*/
+    .NavOverlay
+    {
+        height: 0;
+        z-index: 4;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        position: fixed;
+        background-color: var(--transparentgray);
+        overflow-x: hidden;
+        transition: 200ms;
+    }
+    .NavOverlay > .OverlayContent
+    {
+        position: relative;
+        top: 25%;
+        text-align: center;
+    }
+    .NavOverlay > .OverlayContent a, .NavOverlay > .CloseOverlayButton
+    {
+        text-decoration: none;
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        color: white;
+        display: block;
+    }
+    .NavOverlay .OverlayContent a:hover, .NavOverlay .OverlayContent a:focus,
+    .NavOverlay > .CloseOverlayButton:hover, .NavOverlay > .CloseOverlayButton:focus
+    {
+        color: var(--purple);
+        transition: 150ms;
+    }
+    .NavOverlay .CloseOverlayButton
+    {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 5rem;
+    }
+/*#endregion*/
+
+/*#region OVERLAY Filter overlay*/
+    .HiddenSearchSection
+    {
+        margin-top: 0;
+        z-index: 4;
+        text-align: center;
+    }
+    .HiddenSearchSection > span
+    {
+        background-color: transparent;
+        border: 1px solid transparent;
+    }
+    .HiddenSearchSection .SearchEl1, .HiddenSearchSection .SearchEl2, .HiddenSearchSection .SearchEl3, .HiddenSearchSection .SearchEl4
+    {
+        background-color: white;
+    }
+    @media only screen and (min-width: 576px)
+    {
+        .HiddenSearchSection .SearchEl3, .HiddenSearchSection .SearchEl4
+        {
+            width: 48.75%;
+        }        
+    }
+    .FilterOverlayBox
+    {
+        position: absolute;
+        width: 100%;
+        max-width: 50rem;
+    }
+    @media only screen and (min-width: 767px)
+    {
+        .FilterOverlayBox
+        {
+            width: auto;
+            left: 2rem;
+            right: 2rem;
+            top: 2rem;
+        }
+        .FilterMain
+        {
+            border-radius: 1rem;
+        }
+    }
+    .FilterMain
+    {
+        width: 100%;
+        background-color: var(--bg);
+    }
+    .NavOverlay .CloseFilterButton
+    {
+        text-decoration: none;
+        font-size: 2.2rem;
+        color: var(--lightergray);
+        position: absolute;
+        right: 1rem;
+    }
+    .NavOverlay .CloseFilterButton:hover, .NavOverlay .CloseFilterButton:focus
+    {
+        color: var(--purple);
+        transition: 150ms all;
+    }
+    .FilterHeader
+    {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: var(--black);
+    }
+    .FilterDividerLine
+    {
+        border-bottom: 1px solid var(--lightgray);
+    }
+    .ClearFilterButton
+    {
+        font-weight: 600;
+        font-size: 0.8rem;
+        line-height: 2.6rem;
+    }
+    .ClearFilterButton:link, .ClearFilterButton:visited, .ClearFilterButton:hover, .ClearFilterButton:active
+    {
+        color: var(--black);
+    }
+    .ShowFilterButton
+    {
+        width: 7rem !important;
+        color: white;
+        font-weight: 600;
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
+    }
+    .ShowFilterButton:hover, .ShowFilterButton:focus
+    {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        transition: 150ms all;
+    }
+/*#endregion*/
+
+/*#region OVERLAY Filter overlay checkboxes*/
+.FilterCheckboxContainer
+{
+    width: auto;
+    display: inline-flex;
+    flex-wrap: wrap;    
+}
+.FilterCheckbox
+{
+    margin-top: 0.1rem;
+}
+.FilterSmallText
+{
+    font-weight: 500;
+}
+@media only screen and (max-width: 575px)
+{
+    .FilterCheckboxLabel
+    {
+        width: 100%;
+        margin-left: 2rem;
+    }
+}
+@media only screen and (min-width: 576px)
+{
+    .FilterSmallText p
+    {
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+}
+/*#endregion*/
+
+/*#region OVERLAY Filter overlay slider*/
+    .RangeOutput
+    {
+        font-weight: bold;
+        color: var(--purple);
+        position: absolute;
+        width: 2rem;
+        text-align: center;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+    }
+    .ValueRange
+    {
+        padding: 0;
+        height: 2rem;
+        -webkit-appearance: none;
+        width: 100%;
+        background-color: transparent;
+    }
+    .ValueRange:focus
+    {
+        outline: none;
+    }
+    .ValueRange::-webkit-slider-runnable-track
+    {
+        height: 0.5rem;
+        cursor: pointer;
+        background: var(--lightgray);
+        border-radius: 0.25rem;
+    }
+    .ValueRange::-moz-range-track
+    {
+        height: 0.5rem;
+        cursor: pointer;
+        background: var(--lightgray);
+        border-radius: 0.25rem;
+    }
+    .ValueRange::-webkit-slider-thumb
+    {
+        background: var(--purple);
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -0.75rem;
+    }
+    .ValueRange::-moz-range-thumb
+    {
+        background: var(--purple);
+        height: 2rem;
+        width: 2rem;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -0.75rem;
+    }
+    .InputRangeButton
+    {
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.4rem;
+        color: var(--lightergray);
+        font-weight: 300;
+    }
+/*#endregion*/
