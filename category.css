@@ -43,10 +43,6 @@
 /*#endregion*/
 
 /*#region All cards*/
-    .AllCards
-    {
-
-    }
     .MediumStaticCard
     {
         width: 33.33%;
@@ -75,26 +71,6 @@
     }
 /*#endregion*/
 
-/*#region Restaurant/Calendar overlay*/
-    .CloseOverlay
-    {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        border: none;
-        font-size: 2rem;
-        line-height: 2rem;
-        color: var(--lightgray);
-        background-color: var(--bg);
-        font-weight: 200;
-    }
-    .CloseOverlay:active, .CloseOverlay:focus, .CloseOverlay:hover
-    {
-        transition: all 150ms linear;
-        color: white;
-        background-color: var(--purple);
-    }
-/*#endregion*/
 
 /*#region Restaurant overlay*/
     .RestaurantOverlayContainer

@@ -822,6 +822,27 @@ transform: scale(1);
 /*#endregion*/
 
 
+/*#region OVERLAY General elements*/
+    .CloseOverlay
+    {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: none;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: var(--lightgray);
+        background-color: var(--bg);
+        font-weight: 200;
+    }
+    .CloseOverlay:active, .CloseOverlay:focus, .CloseOverlay:hover
+    {
+        transition: all 150ms linear;
+        color: white;
+        background-color: var(--purple);
+    }
+/*#endregion*/
+
 /*#region OVERLAY Mobile navbar*/
     .MobileNavbar
     {
@@ -897,133 +918,201 @@ transform: scale(1);
 /*#endregion*/
 
 /*#region OVERLAY Filter overlay*/
-    .HiddenSearchSection
-    {
-        margin-top: 0;
-        z-index: 4;
-        text-align: center;
-    }
-    .HiddenSearchSection > span
-    {
-        background-color: transparent;
-        border: 1px solid transparent;
-    }
-    .HiddenSearchSection .SearchEl1, .HiddenSearchSection .SearchEl2, .HiddenSearchSection .SearchEl3, .HiddenSearchSection .SearchEl4
-    {
-        background-color: white;
-    }
-    @media only screen and (min-width: 576px)
-    {
-        .HiddenSearchSection .SearchEl3, .HiddenSearchSection .SearchEl4
-        {
-            width: 48.75%;
-        }        
-    }
-    .FilterOverlayBox
-    {
-        position: absolute;
-        width: 100%;
-        max-width: 50rem;
-    }
-    @media only screen and (min-width: 767px)
-    {
-        .FilterOverlayBox
-        {
-            width: auto;
-            left: 2rem;
-            right: 2rem;
-            top: 2rem;
-        }
-        .FilterMain
-        {
-            border-radius: 1rem;
-        }
-    }
-    .FilterMain
-    {
-        width: 100%;
-        background-color: var(--bg);
-    }
-    .NavOverlay .CloseFilterButton
-    {
-        text-decoration: none;
-        font-size: 2.2rem;
-        color: var(--lightergray);
-        position: absolute;
-        right: 1rem;
-    }
-    .NavOverlay .CloseFilterButton:hover, .NavOverlay .CloseFilterButton:focus
-    {
-        color: var(--purple);
-        transition: 150ms all;
-    }
-    .FilterHeader
-    {
-        font-size: 1.7rem;
-        font-weight: 700;
-        color: var(--black);
-    }
-    .FilterDividerLine
-    {
-        border-bottom: 1px solid var(--lightgray);
-    }
-    .ClearFilterButton
-    {
-        font-weight: 600;
-        font-size: 0.8rem;
-        line-height: 2.6rem;
-    }
-    .ClearFilterButton:link, .ClearFilterButton:visited, .ClearFilterButton:hover, .ClearFilterButton:active
-    {
-        color: var(--black);
-    }
-    .ShowFilterButton
-    {
-        width: 7rem !important;
-        color: white;
-        font-weight: 600;
-        background-color: var(--purple);
-        border: 1px solid var(--purple);
-    }
-    .ShowFilterButton:hover, .ShowFilterButton:focus
-    {
-        background-color: var(--black);
-        border: 1px solid var(--black);
-        transition: 150ms all;
-    }
-/*#endregion*/
-
-/*#region OVERLAY Filter overlay checkboxes*/
-.FilterCheckboxContainer
+.HiddenSearchSection
 {
-    width: auto;
-    display: inline-flex;
-    flex-wrap: wrap;    
+    margin-top: 0;
+    z-index: 4;
+    text-align: center;
 }
-.FilterCheckbox
+.HiddenSearchSection > span
 {
-    margin-top: 0.1rem;
+    background-color: transparent;
+    border: 1px solid transparent;
 }
-.FilterSmallText
+.HiddenSearchSection .SearchEl1, .HiddenSearchSection .SearchEl2, .HiddenSearchSection .SearchEl3, .HiddenSearchSection .SearchEl4
 {
-    font-weight: 500;
-}
-@media only screen and (max-width: 575px)
-{
-    .FilterCheckboxLabel
-    {
-        width: 100%;
-        margin-left: 2rem;
-    }
+    background-color: white;
 }
 @media only screen and (min-width: 576px)
 {
-    .FilterSmallText p
+    .HiddenSearchSection .SearchEl3, .HiddenSearchSection .SearchEl4
     {
-        font-size: 0.8rem;
-        line-height: 1.4rem;
+        width: 48.75%;
+    }        
+}
+.FilterOverlayBox
+{
+    position: absolute;
+    width: 100%;
+    max-width: 60rem;
+}
+@media only screen and (min-width: 767px)
+{
+    .FilterOverlayBox
+    {
+        width: auto;
+        left: 2rem;
+        right: 2rem;
+        top: 2rem;
+    }
+    .FilterMain
+    {
+        border-radius: 1rem;
     }
 }
+.FilterMain
+{
+    width: 100%;
+    background-color: var(--bg);
+}
+.NavOverlay .CloseFilterButton
+{
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: var(--lightergray);
+    position: absolute;
+    right: 1rem;
+}
+.NavOverlay .CloseFilterButton:hover, .NavOverlay .CloseFilterButton:focus
+{
+    color: var(--purple);
+    transition: 150ms all;
+}
+.FilterHeader
+{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--black);
+}
+.FilterDividerLine
+{
+    border-bottom: 1px solid var(--lightgray);
+}
+.ClearFilterButton
+{
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 2.6rem;
+}
+.ClearFilterButton:link, .ClearFilterButton:visited, .ClearFilterButton:hover, .ClearFilterButton:active
+{
+    color: var(--black);
+}
+.ShowFilterButton
+{
+    width: 7rem !important;
+    color: white;
+    font-weight: 600;
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+}
+.ShowFilterButton:hover, .ShowFilterButton:focus
+{
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    transition: 150ms all;
+}
+.CloseFilterOverlayBox
+{
+    position: absolute;
+    margin-left: -4rem;
+}
+/*#endregion*/
+
+/*#region OVERLAY Filter overlay checkboxes*/
+    .FilterCheckboxContainer
+    {
+        width: auto;
+        display: inline-flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+    .FilterCheckboxContainer li
+    {
+        display: inline;
+    }
+    .FilterCheckbox
+    {
+        margin-top: 0.1rem;
+    }
+    .FilterSmallText
+    {
+        font-weight: 500;
+    }
+    .FilterCheckboxContainer li label
+    {
+        display: inline-block;
+        border: 1px solid var(--black);
+        color: var(--black);
+        border-radius: 2rem;
+        white-space: nowrap;
+        margin-right: 0.75rem;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: all 150ms;
+        padding-right: 1.8rem !important; 
+    }
+    .FilterCheckboxContainer li label
+    {
+        padding: 0.5rem 0.75rem;
+        cursor: pointer;
+    }
+    .FilterCheckboxContainer li label::before
+    {
+        display: inline-block;
+        padding: 2px 6px 2px 2px;
+        content: "\f067";
+        transition: 150ms all;
+        opacity: 0;
+        border: none;
+        visibility: hidden;
+    }
+    .FilterCheckboxContainer li input[type="checkbox"]:checked + label::before
+    {
+        content: "\f00c";
+        transform: rotate(-360deg);
+        transition: 150ms all;
+        opacity: 0;
+        border: none;
+        visibility: hidden;
+    }
+    .FilterCheckboxContainer li input[type="checkbox"]:checked + label
+    {
+        border: 1px solid transparent;
+        background-color: var(--green);
+        color: white;
+        transition: 150ms all;
+    }
+    .FilterCheckboxContainer li input[type="checkbox"]
+    {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .FilterUl
+    {
+        padding-inline-start: 0px !important;
+    }
+    @media only screen and (max-width: 575px)
+    {
+        .FilterCheckboxLabel
+        {
+            width: 100%;
+            margin-left: 2rem;
+        }
+    }
+    @media only screen and (min-width: 576px)
+    {
+        .FilterSmallText p
+        {
+            font-size: 0.8rem;
+            line-height: 1.4rem;
+        }
+    }
 /*#endregion*/
 
 /*#region OVERLAY Filter overlay slider*/
@@ -1094,3 +1183,6 @@ transform: scale(1);
         font-weight: 300;
     }
 /*#endregion*/
+
+
+

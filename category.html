@@ -77,10 +77,9 @@
     <!--Filters (mobile search)-->
     <section class="FilterSection NavOverlay" id="FilterSection">
         <div class="FilterOverlayBox mx-auto">
-            <form action="results.html" id="FilterForm" class="FilterMain mb-0 mb-md-5">
-                <div class="MaxWidth px-xl-5 py-3">
+            <form id="FilterForm" class="FilterMain mb-0 mb-md-5">
+                <div class="MaxWidth px-xl-5 pt-3">
                     <a href="javascript:void(0)" class="CloseFilterButton" onclick="CloseNavMenu('FilterSection')">&times;</a>
-
                     <div class="my-4">
                         <p class="FilterHeader w-100 text-center d-md-none text-md-left">Search</p>
                         <section class="SearchSection HiddenSearchSection d-flex d-md-none justify-content-center">
@@ -102,113 +101,48 @@
                             </span>
                         </section>
                     </div>
-
                     <div class="FilterDividerLine d-flex d-md-none"></div>
-
-                    <div class="my-4">
+                    <div class="my-0">
                         <p class="FilterHeader mb-4 w-100 text-center text-md-left">Type of place</p>
-                        <div class="FilterSmallText FilterCheckboxContainer">
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class=" mb-0 ml-1">Sushi</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Asian</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Pizza</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Alcoholic coctails</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Indian food</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Vegan</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Latvian food</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Burgers</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Fast food</p>
-                            </label>
-                        </div>
+                        <ul class="FilterCheckboxContainer FilterUl">
+                            <li><input type="checkbox" class="checkbox" id="checkboxOne" value=""><label for="checkboxOne">Sushi</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxTwo" value=""><label for="checkboxTwo">Soup</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxThree" value=""><label for="checkboxThree">Indian</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxFour" value=""><label for="checkboxFour">Salad</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxFive" value=""><label for="checkboxFive">Kebab</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxSix" value=""><label for="checkboxSix">Pizza</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxseven" value=""><label for="checkboxseven">Sweet</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxeight" value=""><label for="checkboxeight">Chinese</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxnine" value=""><label for="checkboxnine">Alcoholic coctail</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxten" value=""><label for="checkboxten">wrap</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxeleven" value=""><label for="checkboxeleven">Vegan</label></li>
+                        </ul>
                     </div>
-
                     <div class="FilterDividerLine"></div>
-
-                    <div class="my-4">
+                    <div class="mt-4">
                         <p class="FilterHeader mb-4 w-100 text-center text-md-left">Price of range</p>
-                        <div class="row m-0 p-0">
-                            <div class="order-2 order-md-1 col-3 col-md-2 mr-auto mr-md-0 row p-0 m-0">
-                                <div class="col-6 p-0 m-0 SmallCardText text-center">
-                                    <p class="sml mb-0">min price</p>
-                                    <p class="sml">€ 10</p>  
-                                </div>
-                                <div class="col-6 p-0 m-0">
-                                    <button type="button" id="InputRangeButtonDown" class="CardNavButton InputRangeButton mx-auto">-</button>
-                                </div>
-                            </div>
-                            <div class="order-1 order-md-2 col-12 col-md-8 RangeWrapper p-0 m-0 mb-5 mb-md-0 pt-1">
-                                <input type="range" id="ValueRange" class="ValueRange" value="150" min="10" max="1000" step="1">
-                                <output class="RangeOutput"></output>
-                            </div>
-                            <div class="order-3 order-md-3 col-3 col-md-2 ml-auto ml-md-0 row p-0 m-0">
-                                <div class="col-6 p-0 m-0">
-                                    <button type="button" id="InputRangeButtonUp" class="CardNavButton InputRangeButton mx-auto">+</button>
-                                </div>
-                                <div class="col-6 p-0 m-0 SmallCardText text-center">
-                                    <p class="sml mb-0">max price</p>
-                                    <p class="sml">€1000+</p>  
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="FilterCheckboxContainer FilterUl">
+                            <li><input type="checkbox" class="checkbox" id="checkboxTW" value=""><label for="checkboxTW">10 €</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxTH" value=""><label for="checkboxTH">20 €</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxFR" value=""><label for="checkboxFR">50 €</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxFI" value=""><label for="checkboxFI">80 €</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxSI" value=""><label for="checkboxSI">100 €</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxSE" value=""><label for="checkboxSE">150 €</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxET" value=""><label for="checkboxET">more €</label></li>
+                        </ul>
                     </div>
-
                     <div class="FilterDividerLine"></div>
-
-                    <div class="my-4">
+                    <div class="mt-4">
                         <p class="FilterHeader mb-4 w-100 text-center text-md-left">Facilities</p>
-                        <div class="FilterSmallText FilterCheckboxContainer">
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class=" mb-0 ml-1">Tv</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Free parking</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Childrens corner</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Pool</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Wifi</p>
-                            </label>
-                            <label class="CheckboxLabel FilterCheckboxLabel my-2 pr-5">
-                                <input class="CustomCheckbox FilterCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
-                                <p class="mb-0 ml-1">Pool</p>
-                            </label>
-                        </div>
+                        <ul class="FilterCheckboxContainer FilterUl">
+                            <li><input type="checkbox" class="checkbox" id="checkboxZR" value=""><label for="checkboxZR">TV</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxZC" value=""><label for="checkboxZC">Pool</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxZQ" value=""><label for="checkboxZQ">Wifi</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxZA" value=""><label for="checkboxZA">Free parking</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxZD" value=""><label for="checkboxZD">Childrens corner</label></li>
+                            <li><input type="checkbox" class="checkbox" id="checkboxZG" value=""><label for="checkboxZG">Pook</label></li>
+                        </ul>
                     </div>
-
                 </div>
                 <div class="FilterDividerLine"></div>
                 <div class="MaxWidth px-xl-5 py-3 d-flex justify-content-between">
