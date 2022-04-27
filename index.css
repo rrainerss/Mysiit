@@ -388,6 +388,17 @@ transform: scale(1);
     {
         color: white;
     }
+    .NavbarSpacer
+    {
+        height: 2.6rem;
+        border: 0.5px solid var(--bordergray);
+    }
+    .CustomNavLink:link, .CustomNavLink:visited, .CustomNavLink:hover, .CustomNavLink:active
+    {
+        font-size: 0.8rem;
+        color: var(--black);
+        font-weight: 500;
+    }
 /*#endregion*/
 
 /*#region TOP NAVBAR Profile button*/
@@ -441,7 +452,6 @@ transform: scale(1);
 /*#region TOP NAVBAR Language button*/
     .LangButton
     {
-        width: 6.5rem;
         text-align: right;
         font-weight: 500;
         background-color: transparent;
@@ -455,7 +465,10 @@ transform: scale(1);
     }
     .LangButton > p::after
     {
-        content: none;
+        background-image: url("icons/down_arrow_dark.png");
+        background-size: 1.3rem 1.3rem;
+        margin-top: -1.9rem;
+        background-repeat: no-repeat;
     }
     .LangButton:active, .LangButton:hover
     {
@@ -479,7 +492,7 @@ transform: scale(1);
         position: absolute;
         width: 10rem;
         margin-top: 0.5rem;
-        margin-left: -1.75rem;
+        margin-left: -0.75rem;
         border: 1px solid transparent;
         border-radius: 1.5rem;
         position: absolute;

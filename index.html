@@ -36,11 +36,19 @@
                     </li>
                 </ul>       
             </div>
+
             <div class="navbar w-50 w-md-100 p-0">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown d-flex ml-auto ml-md-3">
-                        <!--Remove d-none below to enable language button-->
-                        <button class="d-none PillElement LangButton ShrinkNavButton p-0 pr-3 m-0" type="button" id="LangDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown d-flex">
+                        <a class="CustomNavLink my-auto" href="">Login</a>
+                    </li>
+                    <div class="nav-item NavbarSpacer mx-3"></div>
+                    <li class="nav-item dropdown d-flex">
+                        <a class="CustomNavLink my-auto" href="">Sign up</a>
+                    </li>
+                    <div class="nav-item NavbarSpacer mx-3"></div>
+                    <li class="nav-item dropdown d-flex">
+                        <button class="PillElement LangButton ShrinkNavButton p-0 text-center m-0" type="button" id="LangDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <p class="IconText m-0">English</p>
                         </button>
                         <div class="LangDropdown ShrinkDropdown mt-2 py-0 dropdown-menu my-4" aria-labelledby="LangDropdownButton">
@@ -51,22 +59,6 @@
                             <a class="DropdownButton text-center" href="#">Lithuanian</a>
                             <br>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown d-none d-md-flex ml-3">
-                        <li class="nav-item dropdown d-flex ml-auto ml-md-3">
-                            <button class="PillElement ProfileButton p-0 m-0 dropdown-toggle" type="button" id="ProfileDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <p class="IconText m-0"><b>Profile</b></p>
-                            </button>
-                            <div class="ProfileDropdown mt-2 py-0 dropdown-menu my-4" aria-labelledby="ProfileDropdownButton">
-                                <div class="text-center">
-                                    <div class="Triangle text-center"></div>
-                                </div>
-                                <a class="DropdownButton text-center" href="profile.html">Profile</a>
-                                <a class="DropdownButton text-center" href="profile.html">Favourites</a>
-                                <a class="DropdownButton text-center" href="profile.html">Log out</a>
-                                <br>
-                            </div>
-                        </li>
                     </li>
                 </ul>
             </div>
