@@ -239,6 +239,11 @@
 
 //Category selector in restaurant view
 //FoodMenuDiv, OffersDiv
+    window.onload = (event) =>
+    {
+        document.querySelectorAll("div[value=DynamicDiv]")[1].style.display = 'none';
+    };
+
     function ShowRestaurantMenu(DivClass, ButtonClass)
     {
         document.querySelectorAll("div[value=DynamicDiv]").forEach(function(element)
