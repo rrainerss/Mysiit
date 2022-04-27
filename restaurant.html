@@ -218,77 +218,358 @@
     <section class="RestaurantDescription">
         <div class="DescriptionSide MaxWidth">
             <div class="DescriptionMenu">
-                <a class="mr-3" href="">What this place offers</a>
-                <a class="LightGrayText mr-3" href="">Restaurant menu</a>
-                <a class="LightGrayText" href="">Restaurant photo</a>
+                <a class="SelectableLink SelLink0 LinkDeselected LinkSelected mr-3" href="javascript:void(0)" onclick="ShowRestaurantMenu('OffersDiv', 'SelLink0')">What this place offers</a>
+                <a class="SelectableLink SelLink1 LinkDeselected mr-3" href="javascript:void(0)" onclick="ShowRestaurantMenu('FoodMenuDiv', 'SelLink1')">Restaurant menu</a>
+                <a class="SelectableLink SelLink2 LinkDeselected" href="javascript:void(0)">Restaurant photo</a>
             </div>
-            <div class="IconColumnContainer my-4 d-flex flex-wrap">
-                <div class="IconColumn d-flex flex-column mr-md-5">
-                    <div class="py-2 m-0">
-                        <img class="d-inline mb-1 mr-2" src="icons/parking.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Free parking on premises</p>
+
+            <div value="DynamicDiv" class="OffersDiv">
+                <div class="IconColumnContainer my-4 d-flex flex-wrap">
+                    <div class="IconColumn d-flex flex-column mr-md-5">
+                        <div class="py-2 m-0">
+                            <img class="d-inline mb-1 mr-2" src="icons/parking.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Free parking on premises</p>
+                        </div>
+                        <div class="py-2 m-0">
+                            <img class="d-inline mb-1 mr-2" src="icons/wifi.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Wifi</p>
+                        </div>
+                        <div class="py-2 m-0">
+                            <img class="d-inline mb-1 mr-2" src="icons/meat.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Meat dishes</p>
+                        </div>
+                        <div class="py-2 m-0 d-none HiddenIcon">
+                            <img class="d-inline mb-1 mr-2" src="icons/coffee.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Espresso</p>
+                        </div>
                     </div>
-                    <div class="py-2 m-0">
-                        <img class="d-inline mb-1 mr-2" src="icons/wifi.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Wifi</p>
+                    <div class="IconColumn d-flex flex-column mr-md-5">
+                        <div class="py-2 m-0">
+                            <img class="d-inline mb-1 mr-2" src="icons/table.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Backyard</p>
+                        </div>
+                        <div class="py-2 m-0">
+                            <img class="d-inline mb-1 mr-2" src="icons/tv.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">TV</p>
+                        </div>
+                        <div class="py-2 m-0">
+                            <img class="d-inline mb-1 mr-2" src="icons/leaf.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Vegan</p>
+                        </div>
+                        <div class="py-2 m-0 d-none HiddenIcon">
+                            <img class="d-inline mb-1 mr-2" src="icons/paw.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Animal friendly</p>
+                        </div>
                     </div>
-                    <div class="py-2 m-0">
-                        <img class="d-inline mb-1 mr-2" src="icons/meat.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Meat dishes</p>
-                    </div>
-                    <div class="py-2 m-0 d-none HiddenIcon">
-                        <img class="d-inline mb-1 mr-2" src="icons/coffee.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Espresso</p>
+                    <div class="IconColumn HiddenColumn d-flex flex-column">
+                        <div class="py-2 m-0">
+                            <img class="d-inline mb-1 mr-2" src="icons/coffee.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Espresso</p>
+                        </div>
+                        <div class="py-2 m-0">
+                            <img class="d-inline mb-1 mr-2" src="icons/paw.png" width="17" height="17">
+                            <p class="d-inline mb-0 col p-0">Animal friendly</p>
+                        </div>
                     </div>
                 </div>
-                <div class="IconColumn d-flex flex-column mr-md-5">
-                    <div class="py-2 m-0">
-                        <img class="d-inline mb-1 mr-2" src="icons/table.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Backyard</p>
+                <div class="DividerLine mb-4"></div>
+                <div class="DescriptionFont d-inline-flex mb-4">
+                    <div class="mr-5">
+                        <p class="DescriptionHeader DarkGrayText mb-2">Restaurant Information</p>
+                        <p class="mb-0">Kaļķu iela 2 (Golder Coffee telpās)</p>
+                        <p class="mb-0">LV-1050 Rīga</p>
                     </div>
-                    <div class="py-2 m-0">
-                        <img class="d-inline mb-1 mr-2" src="icons/tv.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">TV</p>
-                    </div>
-                    <div class="py-2 m-0">
-                        <img class="d-inline mb-1 mr-2" src="icons/leaf.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Vegan</p>
-                    </div>
-                    <div class="py-2 m-0 d-none HiddenIcon">
-                        <img class="d-inline mb-1 mr-2" src="icons/paw.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Animal friendly</p>
+                    <div class="d-inline-flex">
+                        <div>
+                            <p class="DescriptionHeader DarkGrayText mb-2">Opening times</p>
+                            <p class="mb-0">Monday-Thursday</p>
+                            <p class="mb-0">Friday-Saturday</p>
+                            <p class="mb-0">Sunday</p>
+                        </div>
+                        <div>
+                            <p class="DescriptionHeader DarkGrayText mb-2">­</p>
+                            <p class="mb-0">10:00-23:00</p>
+                            <p class="mb-0">10:00-24:00</p>
+                            <p class="mb-0">10:00-23:00</p>
+                        </div>
                     </div>
                 </div>
-                <div class="IconColumn HiddenColumn d-flex flex-column">
-                    <div class="py-2 m-0">
-                        <img class="d-inline mb-1 mr-2" src="icons/coffee.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Espresso</p>
+                <div class="DividerLine my-0"></div>
+                <div class="swiper mb-5">
+                    <div class="row w-100 my-4 mx-0">
+                        <div class="col-12 col-sm-8 order-2 order-sm-1 px-0">
+                            <p class="DescriptionHeader DarkGrayText mb-2">Restaurant photos</p>
+                        </div>
+                        <div class="DesktopCardNav col-12 col-sm-4 order-1 order-sm-2 px-0 d-flex align-items-center justify-content-start justify-content-sm-end">
+                            <a class="mr-3" href="category.html">Show (18)</a>
+                            <button class="CustomSwiperButtonPrevious CardNavButton">&lt</button>
+                            <button class="CustomSwiperButtonNext ml-2 CardNavButton">&gt</button>
+                        </div>
                     </div>
-                    <div class="py-2 m-0">
-                        <img class="d-inline mb-1 mr-2" src="icons/paw.png" width="17" height="17">
-                        <p class="d-inline mb-0 col p-0">Animal friendly</p>
+                    <div class="swiper-wrapper">
+                        <div class="CardBox mx-0 ml-n2 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_1.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_2.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_3.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_4.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_1.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_2.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_3.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_4.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_3.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="CardBox mx-0 mr-n2 swiper-slide SquareCard container-fluid p-0 h-auto">
+                            <div class="h-100 mx-1 mx-md-2">
+                                <div class="row w-100 m-0">
+                                    <a class="ClickableImage" href="restaurant.html">
+                                        <img class="col p-0 w-100 img-fluid" src="images/restorans_square_4.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+                <div class="DescriptionFont mb-4">
+                    <p class="DescriptionHeader DarkGrayText mb-2">Story</p>
+                    <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s, when an unknown printer took a galley of type and scrambled it to
+                    make a type specimen book. It has survived not only five centuries, but also
+                    the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div class="DescriptionFont mb-4">
+                    <p class="DescriptionHeader DarkGrayText mb-2">Find in Google maps</p>
+                    <div class="w-100 DescriptionMap"></div>
+                </div>                
+            </div>
+
+            <div value="DynamicDiv" class="FoodMenuDiv">
+                <div class="FoodMenuCategories my-4">
+                    <a class="LinkSelected mr-3" href="">Food</a>
+                    <a class="LinkDeselected mr-3" href="">Snacks</a>
+                    <a class="LinkDeselected mr-3" href="">Drinks</a>
+                    <a class="LinkDeselected mr-3" href="">Deserts</a>
+                    <a class="LinkDeselected mr-3" href="">Snacks</a>
+                </div>
+                <div class="FoodMenu pb-5">
+                    <div class="FoodMenuCard w-100 d-inline-flex align-items-center mt-4">
+                        <img src="images/menu_1.png" alt="">
+                        <div class="ml-4 mr-5 pr-5">
+                            <p class="FoodMenuTextBold mb-0 DescriptionHeader w-100">Fish and Chips</p>
+                            <p class="FoodMenuText mb-0 w-100">Apcepta mencas fileja alus panējumā, frī kartupeļiem ar rozā mērci</p>
+                        </div>
+                        <p class="FoodMenuText mb-0 ml-auto mr-5">€7.70</p>
+                    </div>
+                    <div class="FoodMenuCard w-100 d-inline-flex align-items-center mt-4">
+                        <img src="images/menu_2.png" alt="">
+                        <div class="ml-4 mr-5 pr-5">
+                            <p class="FoodMenuTextBold mb-0 DescriptionHeader w-100">Vista teriyaki</p>
+                            <p class="FoodMenuText mb-0 w-100">Vista teriyaki mērcē ar kartupeļu biezeni</p>
+                        </div>
+                        <p class="FoodMenuText mb-0 ml-auto mr-5">€7.70</p>
+                    </div>
+                    <div class="FoodMenuCard w-100 d-inline-flex align-items-center mt-4">
+                        <img src="images/menu_3.png" alt="">
+                        <div class="ml-4 mr-5 pr-5">
+                            <p class="FoodMenuTextBold mb-0 DescriptionHeader w-100">Cūkgaļas grilldesiņas ar štovētiem kāpostiem</p>
+                            <p class="FoodMenuText mb-0 w-100">Cūkgaļas grilldesiņas 2gab ar štovētiem kāpostiem un BBQ mērci</p>
+                        </div>
+                        <p class="FoodMenuText mb-0 ml-auto mr-5">€7.70</p>
+                    </div>
+                    <div class="FoodMenuCard w-100 d-inline-flex align-items-center mt-4">
+                        <img src="images/menu_4.png" alt="">
+                        <div class="ml-4 mr-5 pr-5">
+                            <p class="FoodMenuTextBold mb-0 DescriptionHeader w-100">Club sendwičs ar mazsālītu lasi</p>
+                            <p class="FoodMenuText mb-0 w-100">Lasis, melnas olīves, ķiploku mērce, salātu mix *Visi CLub sandwich tiek pasniegti ar mērci un kartupeļiem frī</p>
+                        </div>
+                        <p class="FoodMenuText mb-0 ml-auto mr-5">€7.70</p>
+                    </div>
+                    <div class="FoodMenuCard w-100 d-inline-flex align-items-center mt-4">
+                        <img src="images/menu_5.png" alt="">
+                        <div class="ml-4 mr-5 pr-5">
+                            <p class="FoodMenuTextBold mb-0 DescriptionHeader w-100">Rizotto ar vistu un teļa vaigiem</p>
+                            <p class="FoodMenuText mb-0 w-100">Rizotto ar vistu un teļa vaigiem</p>
+                        </div>
+                        <p class="FoodMenuText mb-0 ml-auto mr-5">€7.70</p>
+                    </div>
+                    <div class="FoodMenuCard w-100 d-inline-flex align-items-center mt-4">
+                        <img src="images/menu_6.png" alt="">
+                        <div class="ml-4 mr-5 pr-5">
+                            <p class="FoodMenuTextBold mb-0 DescriptionHeader w-100">Cūkgaļas ribiņa BBQ</p>
+                            <p class="FoodMenuText mb-0 w-100">"Soud vide" lēni pagatavotas cūkgaļas ribiņas (500g) BBQ marinādē, tiek pasniegti ar kartupeļu daiviņām un BBQ mērci</p>
+                        </div>
+                        <p class="FoodMenuText mb-0 ml-auto mr-5">€7.70</p>
                     </div>
                 </div>
             </div>
-            <div class="DividerLine mb-4"></div>
-            <div class="LocationAndTime d-inline-flex mb-4">
-                <div class="mr-5">
-                    <p class="LocationAndTimeHeader DarkGrayText mb-2">Restaurant Information</p>
-                    <p class="mb-0">Kaļķu iela 2 (Golder Coffee telpās)</p>
-                    <p class="mb-0">LV-1050 Rīga</p>
-                </div>
-                <div>
-                    <p class="LocationAndTimeHeader DarkGrayText mb-2">Opening times</p>
-                    <p class="mb-0">Monday-Thursday 10:00-23:00</p>
-                    <p class="mb-0">Friday-Saturday 10:00-24:00</p>
-                    <p class="mb-0">Sunday 10:00-23:00</p>
-                </div>
-            </div>
-            <div class="DividerLine mb-4"></div>
 
         </div>
-        <div class="CalendarSide ml-auto bg-danger">
-            <p>aaaaa</p>
+        <div class="CalendarSide ml-auto MaxWidth">
+            <div class="CalendarWrapper mb-5">
+                <div class="CheckInText">
+                    <p class="mb-0 text-center">Select check-in date</p>
+                </div>
+                <div class="InnerBox mx-auto px-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between py-2 mt-3">
+                                <button class="CardNavButton text-center">&lt</button>
+                                <p class="mb-0 mt-1 DarkGrayText"><b>April 2022</b></p>
+                                <button class="CardNavButton text-center">&gt</button>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="CalendarLine my-3"></div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col px-0"><b class="DarkGrayText">Su</b></div>
+                        <div class="col px-0"><b class="DarkGrayText">Mo</b></div>
+                        <div class="col px-0"><b class="DarkGrayText">Tu</b></div>
+                        <div class="col px-0"><b class="DarkGrayText">We</b></div>
+                        <div class="col px-0"><b class="DarkGrayText">Th</b></div>
+                        <div class="col px-0"><b class="DarkGrayText">Fr</b></div>
+                        <div class="col px-0"><b class="DarkGrayText">Sa</b></div>
+                    </div>
+                    <div class="row mt-3 text-center">
+                        <div class="col px-0"></div>
+                        <div class="col px-0"></div>
+                        <div class="col px-0"></div>
+                        <div class="col px-0"></div>
+                        <div class="col px-0"></div>
+                        <div class="col px-0">1</div>
+                        <div class="col px-0">2</div>
+                    </div>
+                    <div class="row mt-3 text-center">
+                        <div class="col px-0">3</div>
+                        <div class="col px-0">4</div>
+                        <div class="col px-0">5</div>
+                        <div class="col px-0">6</div>
+                        <div class="col px-0">7</div>
+                        <div class="col px-0">8</div>
+                        <div class="col px-0">9</div>
+                    </div>
+                    <div class="row mt-3 text-center">
+                        <div class="col px-0">10</div>
+                        <div class="col px-0">11</div>
+                        <div class="col px-0">12</div>
+                        <div class="col px-0">13</div>
+                        <div class="col px-0">14</div>
+                        <div class="col px-0">15</div>
+                        <div class="col px-0">16</div>
+                    </div>
+                    <div class="row mt-3 text-center">
+                        <div class="col px-0">17</div>
+                        <div class="col px-0">18</div>
+                        <div class="col px-0">19</div>
+                        <div class="col px-0">20</div>
+                        <div class="col px-0">21</div>
+                        <div class="col px-0">22</div>
+                        <div class="col px-0">23</div>
+                    </div>
+                    <div class="row mt-3 text-center">
+                        <div class="col px-0">24</div>
+                        <div class="col px-0">25</div>
+                        <div class="col px-0">26</div>
+                        <div class="col px-0">27</div>
+                        <div class="col px-0">28</div>
+                        <div class="col px-0">29</div>
+                        <div class="col px-0">30</div>
+                    </div>
+                    <div class="CalendarLine my-3"></div>
+                    <div class="d-flex flex-wrap text-center text-sm-left justify-content-between IncrementorButtons">
+                        <div class="mx-auto my-2 px-2">
+                            <p class="mb-0 DarkGrayText"><b>Time</b></p>
+                            <div class="Incrementor DarkGrayText PillElement TimePill text-right pr-2">
+                                <button class="ValueButton text-center p-0 Decrease" onclick="SubTime()" value="Decrease Value">-</button>
+                                <input title="NumberInput" class="IncTime" type="text" readonly placeholder="12:30">
+                                <button class="ValueButton text-center p-0 Increase" onclick="AddTime()" value="Increase Value">+</button>
+                            </div>
+                        </div>
+                        <div class="mx-auto my-2 px-2">
+                            <p class="mb-0 DarkGrayText"><b>Guests</b></p>
+                            <div class="Incrementor DarkGrayText PillElement GuestsPill text-right pr-3">
+                                <button class="ValueButton text-center p-0 Decrease" onclick="DecreaseValue(1)" value="Decrease Value">-</button>
+                                <input title="NumberInput" class="IncNumber" type="text" readonly value="2" max="8" min="1">
+                                <button class="ValueButton text-center p-0 Increase" onclick="IncreaseValue(1)" value="Increase Value">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4 mx-4">
+                        <button type="submit" class="PillElement CheckInButton mb-4">Check-in</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

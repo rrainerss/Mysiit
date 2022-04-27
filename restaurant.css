@@ -105,7 +105,19 @@
     }
 /*#endregion*/
 
-/*#region Restaurant description*/
+
+/*#region General*/
+    .LinkDeselected:link, .LinkDeselected:visited, .LinkDeselected:hover, .LinkDeselected:active
+    {
+        color: var(--lightgray);
+    }
+    .LinkSelected:link, .LinkSelected:visited, .LinkSelected:hover, .LinkSelected:active
+    {
+        color: var(--black) !important;
+    }
+/*#endregion*/
+
+/*#region Offers side*/
     .RestaurantDescription
     {
         width: 100%;
@@ -123,20 +135,117 @@
     {
         font-size: 1.1rem;
         font-weight: bold;
-        color: var(--black);
         text-underline-offset: 0.5rem;
     }
-    .DescriptionMenu
-    {
-
-    }
-    .LocationAndTime
+    .DescriptionFont
     {
         font-size: 0.8rem;
     }
-    .LocationAndTimeHeader
+    .DescriptionHeader
     {
         font-size: 1.1rem;
         font-weight: bold;
+    }
+    .SquareCard
+    {
+        width: 12rem
+    }
+    .SquareCard img
+    {
+        aspect-ratio: 1 / 1;
+        border-radius: 0.3rem;
+    }
+    .DescriptionMap
+    {
+        height: 14rem;
+        background-image: url('images/map.png');
+        background-size: cover;
+        background-position: center;
+    }
+/*#endregion*/
+
+/*#region Food menu side*/
+    .FoodMenuCard
+    {
+        border-radius: 0.5rem;
+        overflow: hidden;
+        border: 1px solid var(--bordergray);
+    }
+    .FoodMenuCard > img
+    {
+        aspect-ratio: 125 / 139;
+    }
+    .FoodMenuText
+    {
+        font-weight: 500;
+    }
+    .FoodMenuTextBold
+    {
+        font-weight: 700;
+    }
+/*#endregion*/
+
+/*#region Calendar*/
+    .CalendarWrapper
+    {
+        position: -webkit-sticky;
+        position: sticky;
+        top: calc(50% - 19rem);
+        background-color: white;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+        height: 38rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .CalendarLine
+    {
+        border: 1px solid var(--lightestgray);
+    }
+    .InnerBox
+    {
+        max-width: 22rem;
+    }
+    .CheckInText
+    {
+        font-weight: 600;
+        font-size: 1rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        background-color: var(--purple);
+        color: white;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+    .CheckInButton
+    {
+        background-color: var(--green);
+        border: 1px solid var(--green);
+        width: 12rem;
+        font-weight: bold;
+        line-height: 2.4rem;
+        color: white;
+    }
+    .CheckInButton:hover
+    {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        transition: all 150ms;
+    }
+    .TimePill
+    {
+        height: 3.2rem;
+        line-height: 3.1rem;
+        background: url("icons/time.png") no-repeat left;
+        background-size: 1.1rem;
+        background-position-x: 0.8rem;
+    }
+    .GuestsPill
+    {
+        height: 3.2rem;
+        line-height: 3.1rem;
+        background: url("icons/guest.png") no-repeat left;
+        background-size: 1.1rem;
+        background-position-x: 0.8rem;
     }
 /*#endregion*/

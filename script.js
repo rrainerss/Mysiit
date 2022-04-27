@@ -236,3 +236,22 @@
         }
     }
 ///////////
+
+//Category selector in restaurant view
+//FoodMenuDiv, OffersDiv
+    function ShowRestaurantMenu(DivClass, ButtonClass)
+    {
+        document.querySelectorAll("div[value=DynamicDiv]").forEach(function(element)
+        {
+            element.style.display = 'none';
+        });
+        document.querySelectorAll(".SelectableLink").forEach(function(element)
+        {
+            element.classList.remove("LinkSelected");
+        });
+
+        document.getElementsByClassName(ButtonClass)[0].classList.add("LinkSelected");
+
+        document.getElementsByClassName(DivClass)[0].style.display = 'block';
+    }
+///////////
