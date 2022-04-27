@@ -49,3 +49,94 @@
         color: white;
     }
 /*#endregion*/
+
+/*#region Descriptive header details*/
+    .HeaderDetails
+    {
+        font-size: 0.8rem;   
+        font-weight: 500;
+        color: var(--gray);
+    }
+    .HeaderDetails a:link, .HeaderDetails a:visited, .HeaderDetails a:hover, .HeaderDetails a:active
+    {
+        color: var(--gray);
+    }
+    .HeaderDetailsSpacer
+    {
+        border: 0.5px solid var(--bordergray);
+    }
+    .DetailsFavouriteButton
+    {
+        color: var(--black);
+        border: 1px solid var(--bordergray);
+        background-color: var(--lightbg);
+        font-weight: 500;
+        line-height: 2.4rem;
+        width: 7rem;
+    }
+    .DetailsFavouriteButton:active, .DetailsFavouriteButton:hover
+    {
+        background-color: var(--bordergray);
+        transition: all 150ms;
+    }
+    .DetailsFavouriteButton p::before
+    {
+        background-size: 0.75rem 0.75rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        margin-left: -0.15rem;
+        margin-top: 0.8rem;
+        background-image: url("icons/heart.png");
+    }
+    .DetailsReservationButton
+    {
+        color: white;
+        border: 1px solid var(--green);
+        background-color: var(--green);
+        font-weight: 500;
+        line-height: 2.4rem;
+        width: 10rem;
+    }
+    .DetailsReservationButton:active, .DetailsReservationButton:hover
+    {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        transition: all 150ms;
+    }
+/*#endregion*/
+
+/*#region Restaurant description*/
+    .RestaurantDescription
+    {
+        width: 100%;
+        display: flex;
+    }
+    .DescriptionSide
+    {
+        width: calc(100vw - 30rem);
+    }
+    .CalendarSide
+    {
+        width: 30rem;
+    }
+    .DescriptionMenu a:link, .DescriptionMenu a:visited, .DescriptionMenu a:hover, .DescriptionMenu a:active
+    {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--black);
+        text-underline-offset: 0.5rem;
+    }
+    .DescriptionMenu
+    {
+
+    }
+    .LocationAndTime
+    {
+        font-size: 0.8rem;
+    }
+    .LocationAndTimeHeader
+    {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+/*#endregion*/

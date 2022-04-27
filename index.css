@@ -12,6 +12,7 @@
         --transparentgray: rgba(53, 53, 53, 0.904);
 
         --bg: #f6f7f6;
+        --lightbg: #fdfdfd;
         --black: #212120;
         --purple: #41198F;
         --green: #00c400;
@@ -30,12 +31,13 @@
     }
     html, body
     {
-        background-color: var(--bg);
+        background-color: var(--lightbg);
     }
     .navbar
     {
         height: 6rem;
         z-index: 2;
+        background-color: var(--bg);
     }
     .dropdown-toggle::after
     {
@@ -391,7 +393,7 @@ transform: scale(1);
 /*#region TOP NAVBAR Profile button*/
     .ProfileButton
     {
-        color: var(--bg);
+        color: white;
         border: 1px solid var(--darkergray);
         background-color: var(--darkergray);
     }

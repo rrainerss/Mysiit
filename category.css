@@ -4,11 +4,12 @@
         overflow: hidden;
         white-space: nowrap;
         cursor: grab !important;
+        border-bottom: 1px solid var(--bordergray);
     }
     .TagButton
     {
         cursor: pointer !important;
-        background-color: var(--bg);
+        background-color: var(--lightbg);
         border: 1px solid var(--bordergray);
         color: var(--lightgray);
         font-weight: 600;
