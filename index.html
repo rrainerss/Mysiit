@@ -16,7 +16,7 @@
     
     <!-- Navbar -->
     <div class="NavbarLine">
-        <nav class="navbar MaxWidth mx-auto navbar-expand-md">
+        <nav class="navbar MaxWidth mx-auto navbar-expand">
             <div class="navbar w-50 w-md-100 p-0">
                 <ul class="navbar-nav mr-auto">
                     <a class="navbar-brand px-0 py-0" href="index.html">
@@ -24,7 +24,7 @@
                     </a>
                 </ul>
             </div>
-            <div class="mx-auto navbar d-none d-md-flex p-0">
+            <div class="mx-auto navbar p-0">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <input class="PillElement SearchBox pl-5 pr-3" type="text" placeholder="Search..." aria-label="Search">
@@ -39,14 +39,14 @@
 
             <div class="navbar w-50 w-md-100 p-0">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown d-flex">
-                        <a class="CustomNavLink my-auto" href="">Login</a>
+                    <li class="nav-item d-none d-md-flex">
+                        <a class="CustomNavLink my-auto" onclick="OpenNavMenu('LoginOverlay')" href="javascript:void(0)">Login</a>
                     </li>
-                    <div class="nav-item NavbarSpacer mx-3"></div>
-                    <li class="nav-item dropdown d-flex">
-                        <a class="CustomNavLink my-auto" href="">Sign up</a>
+                    <div class="nav-item NavbarSpacer mx-3 d-none d-md-flex"></div>
+                    <li class="nav-item d-none d-md-flex">
+                        <a class="CustomNavLink my-auto" onclick="OpenNavMenu('LoginOverlay')" href="javascript:void(0)">Sign up</a>
                     </li>
-                    <div class="nav-item NavbarSpacer mx-3"></div>
+                    <div class="nav-item NavbarSpacer mx-3 d-none d-md-flex"></div>
                     <li class="nav-item dropdown d-flex">
                         <button class="PillElement LangButton ShrinkNavButton p-0 text-center m-0" type="button" id="LangDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <p class="IconText m-0">English</p>
@@ -60,6 +60,19 @@
                             <br>
                         </div>
                     </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Navbar -->
+    <div class="NavbarLine">
+        <nav class="navbar MaxWidth mx-auto navbar-expand">
+            <div class="navbar w-50 w-md-100 p-0">
+                <ul class="navbar-nav mr-auto">
+                    <a class="navbar-brand px-0 py-0" href="index.html">
+                        <img src="images/Mysiit_logo.svg" width="100" height="40" alt="Mysiit">
+                    </a>
                 </ul>
             </div>
         </nav>
@@ -146,6 +159,44 @@
                     <button class="PillElement ShowFilterButton p-0 m-0" type="submit">
                         <p class="IconText m-0">Show</p>
                     </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--Login popup overlay-->
+    <section class="PopupScrollbar NavOverlay LoginOverlay" id="LoginOverlay">
+        <div class="LoginOverlayContainer">
+            <div class="text-right">
+                <button onclick="CloseNavMenu('LoginOverlay')" class="CloseOverlay m-3">&times;</button>
+            </div>
+            <form action="index.html" class="LoginBox mx-auto my-auto text-center">
+                <h3 class="mb-0">Welcome to Mysiit</h3>
+                <input class="LoginInput px-3 mt-4" type="text" placeholder="Username">
+                <input class="LoginInput px-3 mt-4" type="password" placeholder="Password">
+                <div class="w-100 row SmallLoginText m-0 mt-3">
+                    <div class="GrayLoginText col-5 p-0 text-left">
+                        <label class="CheckboxLabel mb-0">
+                            <input class="CustomCheckbox" type="checkbox" name="CustomCheckbox" id="CustomCheckbox">
+                            Remember Me
+                        </label>
+                    </div>
+                    <div class="GrayLoginText col-7 p-0 m-0 text-right">
+                        <a href="">Forgot password</a>
+                    </div>
+                </div>
+                <button class="PillElement StartButton mt-4">Get started</button>
+                <div class="SmallLoginText mt-1 d-flex flex-wrap justify-content-center">
+                    <p class="ContinueText GrayLoginText text-center w-100 mt-3 mb-0">Or log in with:</p>
+                    <div class="w-100 py-1">
+                        <button class="GoogleButton"><p class="mb-0">Continue with Google</p></button>
+                    </div>
+                    <div class="w-100 py-1">
+                        <button class="FacebookButton"><p class="mb-0">Continue with Facebook</p></button>
+                    </div>
+                </div>
+                <div class="RegisterElement">
+                    <p class="GrayLoginText SmallLoginText">Don't have an account? <a href="">Register</a></p>
                 </div>
             </form>
         </div>
@@ -614,7 +665,7 @@
                 <div class="CardBox StartSlide swiper-slide LargeCard container-fluid p-0 h-auto">
                     <div class="h-100 mx-1 mx-md-2">
                         <div class="row w-100 m-0">
-                            <a class="ClickableImage" href="restaurant.html">
+                            <a class="ClickableImage ClickableImageFull" href="restaurant.html">
                                 <img class="col p-0 w-100 img-fluid" src="images/specials_1.png" alt="">
                                 <p class="CardOverlayText">Pasta restaurant</p>
                             </a>
@@ -625,7 +676,7 @@
                 <div class="CardBox swiper-slide LargeCard container-fluid p-0 h-auto">
                     <div class="h-100 mx-1 mx-md-2">
                         <div class="row w-100 m-0">
-                            <a class="ClickableImage" href="restaurant.html">
+                            <a class="ClickableImage ClickableImageFull" href="restaurant.html">
                                 <img class="col p-0 w-100 img-fluid" src="images/specials_2.png" alt="">
                                 <p class="CardOverlayText">New restaurant in Riga</p>
                             </a>
@@ -636,7 +687,7 @@
                 <div class="CardBox EndSlide swiper-slide LargeCard container-fluid p-0 h-auto">
                     <div class="h-100 mx-1 mx-md-2">
                         <div class="row w-100 m-0">
-                            <a class="ClickableImage" href="restaurant.html">
+                            <a class="ClickableImage ClickableImageFull" href="restaurant.html">
                                 <img class="col p-0 w-100 img-fluid" src="images/specials_1.png" alt="">
                                 <p class="CardOverlayText">Pasta restaurant</p>
                             </a>

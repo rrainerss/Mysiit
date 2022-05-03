@@ -15,7 +15,9 @@
         --lightbg: #fdfdfd;
         --black: #212120;
         --purple: #41198F;
+        --hoverpurple: #3C1B8A;
         --green: #00c400;
+        --blue: #3b5998;
     }
     *
     {
@@ -311,6 +313,10 @@ transform: scale(1);
 /*#endregion*/
 
 
+/*#region Sizing for different screens*/
+    
+/*#endregion*/
+
 /*#region TOP NAVBAR Search box*/
     .SearchBox
     {
@@ -577,8 +583,8 @@ transform: scale(1);
     .SearchEl5
     {
         width: 25%;
-        background-color: var(--green);
-        border: 1px solid var(--green);
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
         color: white;
     }
     .SearchEl5:active, .SearchEl5:hover
@@ -753,10 +759,31 @@ transform: scale(1);
         height: 1.9rem;
         width: 5rem;
     }
-    .ClickableImage:hover > img, .ClickableImage:active > img
+    .ClickableImage
     {
-        filter: brightness(50%);
-        transition: all 150ms linear;
+        display: flex;
+        position: relative;
+    }
+    .ClickableImage::before
+    {
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .ClickableImageFull::before
+    {
+        border-radius: 0.3rem;
+    }
+    .ClickableImage:hover::before
+    {
+        transition: all 150ms;
+        background-color: var(--hoverpurple);
+        opacity: 60%;
     }
     .ClickableImage:link, .ClickableImage:visited, .ClickableImage:hover, .ClickableImage:active
     {
@@ -782,8 +809,9 @@ transform: scale(1);
     }
     .CardOverlayText
     {
-        position: relative;
-        margin-top: -3rem;
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
         margin-left: 1.5rem;
         font-weight: 600;
         font-size: 1.2rem;
@@ -855,6 +883,142 @@ transform: scale(1);
         transition: all 150ms linear;
         color: white;
         background-color: var(--purple);
+    }
+/*#endregion*/
+
+/*#region OVERLAY Login*/
+    .LoginOverlayContainer
+    {
+        color: var(--black);
+        width: 32rem;
+        height: 40rem;
+        margin: auto;
+        margin-top: 5vh;
+        background-color: var(--bg);
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    .LoginBox
+    {
+        width: 60%;
+    }
+    .LoginBox > h3
+    {
+        font-weight: 700;
+        color: var(--purple);
+    }
+    .LoginBox .LoginInput
+    {
+        width: 100%;
+        height: 2.6rem;
+        background-color: var(--lightbg);
+        border: 1px solid var(--bordergray);
+        border-radius: 1rem;
+        font-size: 0.75rem;
+    }::placeholder
+    {
+        color: var(--lightgray);
+    }
+    /*----------------------------------------*/
+    .SmallLoginText
+    {
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    .GrayLoginText, .GrayLoginText a:link, .SmallLoginText a:visited, .SmallLoginText a:hover, .SmallLoginText a:active
+    {
+        line-height: 1.2;
+        color: var(--lightgray);
+    }
+    /*----------------------------------------*/
+    .StartButton
+    {
+        background-color: var(--green);
+        font-weight: 500;
+        border: 1px solid var(--green);
+        color: white;
+        line-height: 2.4rem;
+    }
+    .StartButton:active, .StartButton:hover
+    {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        transition: all 150ms;
+    }
+    /*----------------------------------------*/
+    .ContinueText
+    {
+        line-height: 2rem;
+    }
+    .ContinueButton
+    {
+        width: 2rem;
+        height: 2rem;
+        border: 0;
+        border-radius: 50%;
+        background-color: transparent;
+    }
+    .ContinueIcon
+    {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 1rem;
+    }
+    .ContinueIcon:hover, .ContinueIcon:active
+    {
+        background-color: var(--green);
+        transition: all 150ms;
+    }
+    /*----------------------------------------*/
+    .RegisterElement
+    {
+        font-size: 0.75rem;
+        margin-top: 2rem;
+    }
+    .RegisterElement a:link, .RegisterElement a:visited, .RegisterElement a:hover, .RegisterElement a:active
+    {
+        color: var(--green);
+    }
+    .GoogleButton
+    {
+        border: 1px solid var(--bordergray);
+        background-color: var(--lightbg);
+    }
+    .GoogleButton::before
+    {
+        display: block;
+        content: '';
+        position: absolute;
+        background-size: 1.3rem 1.3rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-image: url(icons/google2.png);
+        margin-top: -0.1rem;
+    }
+    .FacebookButton
+    {
+        border: 1px solid var(--blue);
+        background-color: var(--blue);
+        color: white;
+    }
+    .FacebookButton::before
+    {
+        display: block;
+        content: '';
+        position: absolute;
+        background-size: 1.3rem 1.3rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-image: url(icons/facebook2.png);
+        margin-top: -0.1rem;
+    }
+    .GoogleButton, .FacebookButton
+    {
+        font-weight: 500;
+        font-size: 0.7rem;
+        width: 14rem;
+        height: 2rem;
+        border-radius: 0.5rem;
     }
 /*#endregion*/
 
